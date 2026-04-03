@@ -30,7 +30,6 @@ import {
   Pickaxe,
   Shield,
   Gem,
-  TrendingUp,
   Cpu,
 } from "lucide-react";
 
@@ -275,6 +274,26 @@ function getUpgradeCost(upgrade: Upgrade): number {
   return Math.round(upgrade.baseCost * (1 + (upgrade.level - 1) * 0.55));
 }
 
+function applyXpProgress(prev: UserState): UserState {
+  let next = { ...prev };
+  let xpNeed = getXpNeed(next.level);
+
+  while (next.xp >= xpNeed) {
+    next = {
+      ...next,
+      level: next.level + 1,
+      xp: next.xp - xpNeed,
+      tapPower: next.tapPower + 2,
+      passiveRate: next.passiveRate + 2,
+      credits: next.credits + 60,
+      rarityScore: clamp(next.rarityScore + 2, 0, 999),
+    };
+    xpNeed = getXpNeed(next.level);
+  }
+
+  return next;
+}
+
 export default function App() {
   const [tab, setTab] = useState<TabId>("command");
   const [user, setUser] = useState<UserState>({
@@ -340,11 +359,13 @@ export default function App() {
         const boostBonus = prev.boosterMinutes > 0 ? 2 : 1;
         const gain = Math.round(prev.passiveRate * characterBonus * boostBonus);
 
-        return {
+        const next = {
           ...prev,
           shards: prev.shards + gain,
           xp: prev.xp + Math.round(gain * 0.35),
         };
+
+        return applyXpProgress(next);
       });
     }, PASSIVE_TICK_MS);
 
@@ -361,20 +382,6 @@ export default function App() {
 
     return () => window.clearInterval(boostClock);
   }, []);
-
-  useEffect(() => {
-    if (user.xp >= xpNeed) {
-      setUser((prev) => ({
-        ...prev,
-        level: prev.level + 1,
-        xp: prev.xp - xpNeed,
-        tapPower: prev.tapPower + 2,
-        passiveRate: prev.passiveRate + 2,
-        credits: prev.credits + 60,
-        rarityScore: clamp(prev.rarityScore + 2, 0, 999),
-      }));
-    }
-  }, [user.xp, xpNeed]);
 
   const spawnGain = (value: number) => {
     const item: FloatGain = { id: gainIdRef.current++, value };
@@ -399,13 +406,17 @@ export default function App() {
     const characterBoost = user.character === "Mira Vale" ? 1.12 : 1;
     const gain = Math.round(user.tapPower * comboBonus * crit * boost * characterBoost);
 
-    setUser((prev) => ({
-      ...prev,
-      shards: prev.shards + gain,
-      energy: clamp(prev.energy - 1, 0, prev.maxEnergy),
-      combo: clamp(prev.combo + 1, 0, 40),
-      xp: prev.xp + Math.round(gain * 0.85),
-    }));
+    setUser((prev) => {
+      const next = {
+        ...prev,
+        shards: prev.shards + gain,
+        energy: clamp(prev.energy - 1, 0, prev.maxEnergy),
+        combo: clamp(prev.combo + 1, 0, 40),
+        xp: prev.xp + Math.round(gain * 0.85),
+      };
+
+      return applyXpProgress(next);
+    });
 
     setMissions((prev) =>
       prev.map((m) => {
@@ -479,7 +490,7 @@ export default function App() {
       if (item.id === "chest-key") next.chestCount += 1;
       if (item.id === "xp-burst") next.xp += 250;
 
-      return next;
+      return applyXpProgress(next);
     });
 
     setMarketPurchases((x) => x + 1);
