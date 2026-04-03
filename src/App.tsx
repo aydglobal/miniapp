@@ -1,15 +1,19 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
+  Bell,
+  ChevronDown,
   Crown,
   Gamepad2,
   Gem,
   Gift,
+  Plus,
   Rocket,
   Shield,
   Sparkles,
   Trophy,
   UserRound,
+  X,
   Zap,
 } from "lucide-react";
 import "./App.css";
@@ -87,6 +91,13 @@ const characters: Character[] = [
   },
 ];
 
+const shortcuts = [
+  { id: "gorev", label: "Görevler", icon: Gift, side: "left", row: "top" },
+  { id: "lig", label: "Ligler", icon: Trophy, side: "right", row: "top" },
+  { id: "arkadas", label: "Ekip", icon: UserRound, side: "left", row: "bottom" },
+  { id: "boost", label: "Boost", icon: Rocket, side: "right", row: "bottom" },
+];
+
 function format(value: number): string {
   return new Intl.NumberFormat("tr-TR").format(Math.floor(value));
 }
@@ -135,7 +146,7 @@ export default function App() {
     combo: 0,
     level: 1,
     xp: 0,
-    boostMinutes: 0,
+    boostMinutes: 12,
   });
   const [gains, setGains] = useState<FloatingGain[]>([]);
   const [tapLocked, setTapLocked] = useState(false);
@@ -213,21 +224,30 @@ export default function App() {
     <div className="app-shell">
       <div className="ambient ambient-a" />
       <div className="ambient ambient-b" />
+      <div className="ambient ambient-c" />
+
       <div className="app-frame">
         <header className="topbar">
           <button className="icon-button" aria-label="Kapat">
-            x
+            <X size={18} />
           </button>
+
           <div className="brand-title">
             <img src={logoArt} alt="ADN NEBULA" className="brand-icon" />
             <div>
-              <small>Canlı tap evreni</small>
+              <small>Premium tap evreni</small>
               <strong>ADN NEBULA</strong>
             </div>
           </div>
-          <button className="icon-button" aria-label="Menü">
-            +
-          </button>
+
+          <div className="topbar-actions">
+            <button className="icon-button" aria-label="Bildirimler">
+              <Bell size={18} />
+            </button>
+            <button className="icon-button" aria-label="Ekle">
+              <Plus size={18} />
+            </button>
+          </div>
         </header>
 
         <main className="phone-panel">
@@ -239,13 +259,20 @@ export default function App() {
                 <small>Seviye {player.level}</small>
               </div>
             </div>
-            <div className="header-chip">
-              <Gem size={15} />
-              <span>{format(player.shards)}</span>
+
+            <div className="wallet-actions">
+              <div className="header-chip">
+                <Gem size={15} />
+                <span>{format(player.shards)}</span>
+              </div>
+              <div className="header-chip soft">
+                <ChevronDown size={15} />
+              </div>
             </div>
           </div>
 
           <section className="hero-stage">
+            <div className="stage-shine" />
             <div className="token-title">ADN Token</div>
             <div className="token-value">{format(player.shards)}</div>
 
@@ -256,34 +283,37 @@ export default function App() {
               </div>
               <div className="status-pill cyan">
                 <Zap size={14} />
-                {player.passiveRate} Pasif
+                {player.passiveRate} Web2
+              </div>
+              <div className="status-pill green">
+                <Sparkles size={14} />
+                Boost x1.5
               </div>
             </div>
 
-            <div className="action-floating left top">
-              <Gift size={20} />
-              <span>Görevler</span>
-            </div>
-            <div className="action-floating right top">
-              <Trophy size={20} />
-              <span>Ligler</span>
-            </div>
-            <div className="action-floating left bottom">
-              <Rocket size={20} />
-              <span>Boost</span>
-            </div>
-            <div className="action-floating right bottom">
-              <UserRound size={20} />
-              <span>Karakter</span>
-            </div>
+            {shortcuts.map((shortcut) => {
+              const Icon = shortcut.icon;
+              return (
+                <div
+                  key={shortcut.id}
+                  className={`action-floating ${shortcut.side} ${shortcut.row}`}
+                >
+                  <div className="action-icon-shell">
+                    <Icon size={18} />
+                  </div>
+                  <span>{shortcut.label}</span>
+                </div>
+              );
+            })}
 
             <div className="tap-zone">
+              <div className="character-glow" />
               {gains.map((gain, index) => (
                 <motion.div
                   key={gain.id}
                   className="gain-float"
-                  initial={{ opacity: 0, y: 16, scale: 0.9 }}
-                  animate={{ opacity: 1, y: -80 - index * 8, scale: 1.03 }}
+                  initial={{ opacity: 0, y: 18, scale: 0.92 }}
+                  animate={{ opacity: 1, y: -86 - index * 8, scale: 1.05 }}
                   transition={{ duration: 0.75 }}
                 >
                   {gain.text}
@@ -291,7 +321,7 @@ export default function App() {
               ))}
 
               <motion.button
-                whileTap={{ scale: 0.97 }}
+                whileTap={{ scale: 0.975 }}
                 className="character-button"
                 onClick={handleTap}
                 disabled={tapLocked || player.energy <= 0}
@@ -326,6 +356,17 @@ export default function App() {
             <div className="meter-track">
               <div className="meter-fill gold" style={{ width: `${xpProgress}%` }} />
             </div>
+
+            <div className="stats-mini-row">
+              <div className="mini-pill">
+                <Sparkles size={14} />
+                Kritik %{player.critChance.toFixed(1)}
+              </div>
+              <div className="mini-pill">
+                <Rocket size={14} />
+                Combo x{player.combo}
+              </div>
+            </div>
           </section>
 
           <section className="character-strip">
@@ -333,12 +374,14 @@ export default function App() {
               <button
                 key={character.id}
                 className={player.character === character.id ? "character-card active" : "character-card"}
-                onClick={() => setPlayer((prev) => ({ ...prev, character: character.id }))}
+                onClick={() => setPlayer((prev) => ({ ...prev, character: character.id, combo: 0 }))}
               >
                 <img src={character.art} alt={character.id} />
-                <strong>{character.id}</strong>
-                <span>{character.role}</span>
-                <em>{character.perk}</em>
+                <div className="character-copy">
+                  <strong>{character.id}</strong>
+                  <span>{character.role}</span>
+                  <em>{character.perk}</em>
+                </div>
               </button>
             ))}
           </section>
