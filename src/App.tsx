@@ -281,6 +281,7 @@ const content = {
     releaseTitle: "Not",
     releaseText:
       "Bu belge ADN Token lite paper sunumudur. Nihai hukuki çerçeve, listelenme planı ve teknik sözleşme detayları resmi lansman dokümanlarında ayrıca duyurulacaktır.",
+    heroBadges: ["Tap to Earn", "Online Commerce", "Community Economy"],
   },
   en: {
     brandTitle: "ADN Token Docs",
@@ -496,6 +497,7 @@ const content = {
     releaseTitle: "Note",
     releaseText:
       "This document is the ADN Token lite paper presentation. Final legal framing, listing plans and technical contract details will be announced separately in official launch documents.",
+    heroBadges: ["Tap to Earn", "Online Commerce", "Community Economy"],
   },
 } as const;
 
@@ -593,13 +595,36 @@ export default function App() {
           <section id="overview" className="hero">
             <div className="hero-copy">
               <SectionBadge id="overview" label={t.overviewKicker} />
+              <div className="hero-brandline">
+                <img src={adnTokenLogo} alt="ADN Token" className="hero-brand-emblem" />
+                <div className="hero-brand-text">
+                  <strong>ADN Token</strong>
+                  <span>Lite Paper 2026</span>
+                </div>
+              </div>
               <h1>{t.overviewTitle}</h1>
               <p>{t.overviewText}</p>
+              <div className="hero-badges">
+                {t.heroBadges.map((badge) => (
+                  <span key={badge} className="hero-badge">
+                    {badge}
+                  </span>
+                ))}
+              </div>
             </div>
 
             <div className="hero-panel">
+              <div className="hero-ambient hero-ambient-one" />
+              <div className="hero-ambient hero-ambient-two" />
               <div className="hero-panel-brand">
                 <img src={adnTokenLogo} alt="ADN Token" className="hero-logo" />
+              </div>
+              <div className="hero-token-stage">
+                <div className="hero-ring hero-ring-one" />
+                <div className="hero-ring hero-ring-two" />
+                <div className="hero-token-core">
+                  <img src={adnTokenLogo} alt="ADN Token" className="hero-token-image" />
+                </div>
               </div>
               <div className="hero-panel-head">{t.quickFactsTitle}</div>
               <div className="fact-list">
