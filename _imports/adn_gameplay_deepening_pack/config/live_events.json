@@ -1,0 +1,27 @@
+[
+  {
+    "key": "x2_tap_hour",
+    "name": "X2 Tap Hour",
+    "durationMinutes": 60
+  },
+  {
+    "key": "referral_rush_weekend",
+    "name": "Referral Rush Weekend",
+    "durationHours": 48
+  },
+  {
+    "key": "lucky_chest_night",
+    "name": "Lucky Chest Night",
+    "durationHours": 6
+  },
+  {
+    "key": "prestige_week",
+    "name": "Prestige Week",
+    "durationDays": 7
+  },
+  {
+    "key": "clan_war_sprint",
+    "name": "Clan War Sprint",
+    "durationHours": 24
+  }
+]

@@ -1,0 +1,488 @@
+[
+  {
+    "level": 1,
+    "tapReward": 1.0,
+    "maxEnergy": 500,
+    "regenPerMin": 8,
+    "offlineCapHours": 3.0,
+    "passiveCapPerHour": 250,
+    "unlocks": [
+      "Starter Tap + 4 starter cards"
+    ]
+  },
+  {
+    "level": 2,
+    "tapReward": 1.04,
+    "maxEnergy": 530,
+    "regenPerMin": 8,
+    "offlineCapHours": 3.25,
+    "passiveCapPerHour": 295,
+    "unlocks": [
+      "Daily bonus"
+    ]
+  },
+  {
+    "level": 3,
+    "tapReward": 1.08,
+    "maxEnergy": 560,
+    "regenPerMin": 8,
+    "offlineCapHours": 3.5,
+    "passiveCapPerHour": 348,
+    "unlocks": [
+      "Referral Hub"
+    ]
+  },
+  {
+    "level": 4,
+    "tapReward": 1.12,
+    "maxEnergy": 590,
+    "regenPerMin": 8,
+    "offlineCapHours": 3.75,
+    "passiveCapPerHour": 411,
+    "unlocks": []
+  },
+  {
+    "level": 5,
+    "tapReward": 1.17,
+    "maxEnergy": 620,
+    "regenPerMin": 8,
+    "offlineCapHours": 4.0,
+    "passiveCapPerHour": 485,
+    "unlocks": [
+      "Streak multiplier"
+    ]
+  },
+  {
+    "level": 6,
+    "tapReward": 1.22,
+    "maxEnergy": 650,
+    "regenPerMin": 9,
+    "offlineCapHours": 4.25,
+    "passiveCapPerHour": 572,
+    "unlocks": [
+      "GPU / ASIC cards"
+    ]
+  },
+  {
+    "level": 7,
+    "tapReward": 1.27,
+    "maxEnergy": 680,
+    "regenPerMin": 9,
+    "offlineCapHours": 4.5,
+    "passiveCapPerHour": 675,
+    "unlocks": []
+  },
+  {
+    "level": 8,
+    "tapReward": 1.32,
+    "maxEnergy": 710,
+    "regenPerMin": 9,
+    "offlineCapHours": 4.75,
+    "passiveCapPerHour": 796,
+    "unlocks": [
+      "Referral Quest Chain"
+    ]
+  },
+  {
+    "level": 9,
+    "tapReward": 1.37,
+    "maxEnergy": 740,
+    "regenPerMin": 9,
+    "offlineCapHours": 5.0,
+    "passiveCapPerHour": 940,
+    "unlocks": []
+  },
+  {
+    "level": 10,
+    "tapReward": 1.42,
+    "maxEnergy": 770,
+    "regenPerMin": 9,
+    "offlineCapHours": 5.25,
+    "passiveCapPerHour": 1109,
+    "unlocks": [
+      "Creator Bounties"
+    ]
+  },
+  {
+    "level": 11,
+    "tapReward": 1.48,
+    "maxEnergy": 800,
+    "regenPerMin": 10,
+    "offlineCapHours": 5.5,
+    "passiveCapPerHour": 1308,
+    "unlocks": []
+  },
+  {
+    "level": 12,
+    "tapReward": 1.54,
+    "maxEnergy": 830,
+    "regenPerMin": 10,
+    "offlineCapHours": 5.75,
+    "passiveCapPerHour": 1544,
+    "unlocks": [
+      "Quantum Cooling / longer idle"
+    ]
+  },
+  {
+    "level": 13,
+    "tapReward": 1.6,
+    "maxEnergy": 860,
+    "regenPerMin": 10,
+    "offlineCapHours": 6.0,
+    "passiveCapPerHour": 1822,
+    "unlocks": []
+  },
+  {
+    "level": 14,
+    "tapReward": 1.67,
+    "maxEnergy": 890,
+    "regenPerMin": 10,
+    "offlineCapHours": 6.25,
+    "passiveCapPerHour": 2150,
+    "unlocks": []
+  },
+  {
+    "level": 15,
+    "tapReward": 1.73,
+    "maxEnergy": 920,
+    "regenPerMin": 10,
+    "offlineCapHours": 6.5,
+    "passiveCapPerHour": 2537,
+    "unlocks": [
+      "Premium Market"
+    ]
+  },
+  {
+    "level": 16,
+    "tapReward": 1.8,
+    "maxEnergy": 950,
+    "regenPerMin": 11,
+    "offlineCapHours": 6.75,
+    "passiveCapPerHour": 2993,
+    "unlocks": []
+  },
+  {
+    "level": 17,
+    "tapReward": 1.87,
+    "maxEnergy": 980,
+    "regenPerMin": 11,
+    "offlineCapHours": 7.0,
+    "passiveCapPerHour": 3532,
+    "unlocks": []
+  },
+  {
+    "level": 18,
+    "tapReward": 1.95,
+    "maxEnergy": 1010,
+    "regenPerMin": 11,
+    "offlineCapHours": 7.25,
+    "passiveCapPerHour": 4168,
+    "unlocks": [
+      "Guild Program"
+    ]
+  },
+  {
+    "level": 19,
+    "tapReward": 2.03,
+    "maxEnergy": 1040,
+    "regenPerMin": 11,
+    "offlineCapHours": 7.5,
+    "passiveCapPerHour": 4918,
+    "unlocks": []
+  },
+  {
+    "level": 20,
+    "tapReward": 2.11,
+    "maxEnergy": 1070,
+    "regenPerMin": 11,
+    "offlineCapHours": 7.75,
+    "passiveCapPerHour": 5804,
+    "unlocks": []
+  },
+  {
+    "level": 21,
+    "tapReward": 2.19,
+    "maxEnergy": 1100,
+    "regenPerMin": 12,
+    "offlineCapHours": 8.0,
+    "passiveCapPerHour": 6848,
+    "unlocks": []
+  },
+  {
+    "level": 22,
+    "tapReward": 2.28,
+    "maxEnergy": 1130,
+    "regenPerMin": 12,
+    "offlineCapHours": 8.25,
+    "passiveCapPerHour": 8081,
+    "unlocks": [
+      "Auto-Tap Drones"
+    ]
+  },
+  {
+    "level": 23,
+    "tapReward": 2.37,
+    "maxEnergy": 1160,
+    "regenPerMin": 12,
+    "offlineCapHours": 8.5,
+    "passiveCapPerHour": 9536,
+    "unlocks": []
+  },
+  {
+    "level": 24,
+    "tapReward": 2.46,
+    "maxEnergy": 1190,
+    "regenPerMin": 12,
+    "offlineCapHours": 8.75,
+    "passiveCapPerHour": 11252,
+    "unlocks": []
+  },
+  {
+    "level": 25,
+    "tapReward": 2.56,
+    "maxEnergy": 1220,
+    "regenPerMin": 12,
+    "offlineCapHours": 9.0,
+    "passiveCapPerHour": 13277,
+    "unlocks": [
+      "Seasonal Leaderboards"
+    ]
+  },
+  {
+    "level": 26,
+    "tapReward": 2.67,
+    "maxEnergy": 1250,
+    "regenPerMin": 13,
+    "offlineCapHours": 9.25,
+    "passiveCapPerHour": 15667,
+    "unlocks": []
+  },
+  {
+    "level": 27,
+    "tapReward": 2.77,
+    "maxEnergy": 1280,
+    "regenPerMin": 13,
+    "offlineCapHours": 9.5,
+    "passiveCapPerHour": 18487,
+    "unlocks": []
+  },
+  {
+    "level": 28,
+    "tapReward": 2.88,
+    "maxEnergy": 1310,
+    "regenPerMin": 13,
+    "offlineCapHours": 9.75,
+    "passiveCapPerHour": 21815,
+    "unlocks": [
+      "Smart Missions"
+    ]
+  },
+  {
+    "level": 29,
+    "tapReward": 3.0,
+    "maxEnergy": 1340,
+    "regenPerMin": 13,
+    "offlineCapHours": 10.0,
+    "passiveCapPerHour": 25742,
+    "unlocks": []
+  },
+  {
+    "level": 30,
+    "tapReward": 3.12,
+    "maxEnergy": 1370,
+    "regenPerMin": 13,
+    "offlineCapHours": 10.25,
+    "passiveCapPerHour": 30375,
+    "unlocks": [
+      "Whale Analytics"
+    ]
+  },
+  {
+    "level": 31,
+    "tapReward": 3.24,
+    "maxEnergy": 1400,
+    "regenPerMin": 14,
+    "offlineCapHours": 10.5,
+    "passiveCapPerHour": 35843,
+    "unlocks": []
+  },
+  {
+    "level": 32,
+    "tapReward": 3.37,
+    "maxEnergy": 1430,
+    "regenPerMin": 14,
+    "offlineCapHours": 10.75,
+    "passiveCapPerHour": 42294,
+    "unlocks": []
+  },
+  {
+    "level": 33,
+    "tapReward": 3.51,
+    "maxEnergy": 1460,
+    "regenPerMin": 14,
+    "offlineCapHours": 11.0,
+    "passiveCapPerHour": 49907,
+    "unlocks": []
+  },
+  {
+    "level": 34,
+    "tapReward": 3.65,
+    "maxEnergy": 1490,
+    "regenPerMin": 14,
+    "offlineCapHours": 11.25,
+    "passiveCapPerHour": 58891,
+    "unlocks": []
+  },
+  {
+    "level": 35,
+    "tapReward": 3.79,
+    "maxEnergy": 1520,
+    "regenPerMin": 14,
+    "offlineCapHours": 11.5,
+    "passiveCapPerHour": 69491,
+    "unlocks": [
+      "Airdrop Claim Eligibility"
+    ]
+  },
+  {
+    "level": 36,
+    "tapReward": 3.95,
+    "maxEnergy": 1550,
+    "regenPerMin": 15,
+    "offlineCapHours": 11.75,
+    "passiveCapPerHour": 81999,
+    "unlocks": []
+  },
+  {
+    "level": 37,
+    "tapReward": 4.1,
+    "maxEnergy": 1580,
+    "regenPerMin": 15,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 96759,
+    "unlocks": []
+  },
+  {
+    "level": 38,
+    "tapReward": 4.27,
+    "maxEnergy": 1610,
+    "regenPerMin": 15,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 114176,
+    "unlocks": []
+  },
+  {
+    "level": 39,
+    "tapReward": 4.44,
+    "maxEnergy": 1640,
+    "regenPerMin": 15,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 134728,
+    "unlocks": []
+  },
+  {
+    "level": 40,
+    "tapReward": 4.62,
+    "maxEnergy": 1670,
+    "regenPerMin": 15,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 158978,
+    "unlocks": [
+      "Risk Review / Fast Lane Payouts"
+    ]
+  },
+  {
+    "level": 41,
+    "tapReward": 4.8,
+    "maxEnergy": 1700,
+    "regenPerMin": 16,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 187595,
+    "unlocks": []
+  },
+  {
+    "level": 42,
+    "tapReward": 4.99,
+    "maxEnergy": 1730,
+    "regenPerMin": 16,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 221362,
+    "unlocks": []
+  },
+  {
+    "level": 43,
+    "tapReward": 5.19,
+    "maxEnergy": 1760,
+    "regenPerMin": 16,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 261207,
+    "unlocks": []
+  },
+  {
+    "level": 44,
+    "tapReward": 5.4,
+    "maxEnergy": 1790,
+    "regenPerMin": 16,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 308224,
+    "unlocks": []
+  },
+  {
+    "level": 45,
+    "tapReward": 5.62,
+    "maxEnergy": 1820,
+    "regenPerMin": 16,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 363704,
+    "unlocks": [
+      "Elite Exchange Cards"
+    ]
+  },
+  {
+    "level": 46,
+    "tapReward": 5.84,
+    "maxEnergy": 1850,
+    "regenPerMin": 17,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 429171,
+    "unlocks": []
+  },
+  {
+    "level": 47,
+    "tapReward": 6.07,
+    "maxEnergy": 1880,
+    "regenPerMin": 17,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 506422,
+    "unlocks": []
+  },
+  {
+    "level": 48,
+    "tapReward": 6.32,
+    "maxEnergy": 1910,
+    "regenPerMin": 17,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 597578,
+    "unlocks": []
+  },
+  {
+    "level": 49,
+    "tapReward": 6.57,
+    "maxEnergy": 1940,
+    "regenPerMin": 17,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 705142,
+    "unlocks": []
+  },
+  {
+    "level": 50,
+    "tapReward": 6.83,
+    "maxEnergy": 1970,
+    "regenPerMin": 17,
+    "offlineCapHours": 12,
+    "passiveCapPerHour": 832067,
+    "unlocks": [
+      "Legend Tier + Prestige badge"
+    ]
+  }
+]

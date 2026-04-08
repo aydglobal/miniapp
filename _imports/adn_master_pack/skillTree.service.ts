@@ -1,0 +1,1 @@
+export function getSkills(){ return [{id:1,name:'Tap Boost'}]; }

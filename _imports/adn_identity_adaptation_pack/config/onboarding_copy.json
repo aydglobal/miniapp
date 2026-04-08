@@ -1,0 +1,29 @@
+{
+  "steps": [
+    {
+      "key": "welcome",
+      "title_tr": "ADN evrenine hoş geldin",
+      "body_tr": "Şu anda küçük başlıyorsun. Ama doğru akışla sistemi sen kontrol edeceksin."
+    },
+    {
+      "key": "tap_once",
+      "title_tr": "İlk ADN akışını başlat",
+      "body_tr": "Her üretim sana ADN ve ivme kazandırır. Bu sadece başlangıç."
+    },
+    {
+      "key": "open_shop",
+      "title_tr": "Sistem kur",
+      "body_tr": "Gerçek güç, elle üretmekten çıkıp kendi akışını kurduğunda başlar."
+    },
+    {
+      "key": "open_referral",
+      "title_tr": "Ağını genişlet",
+      "body_tr": "Tek oyuncu büyür. Ağ kuran oyuncu hükmeder."
+    },
+    {
+      "key": "finish",
+      "title_tr": "Şimdi yüksel",
+      "body_tr": "Sen artık bir oyuncu değil, yükselen bir operasyonun merkezisin."
+    }
+  ]
+}

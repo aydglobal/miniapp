@@ -1,0 +1,20 @@
+{
+  "name": "telegram-miniapp-starter",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter api dev\" \"pnpm --filter bot dev\" \"pnpm --filter web dev\"",
+    "build": "pnpm --filter web build",
+    "build:all": "pnpm -r build",
+    "prisma:generate": "pnpm --filter api prisma generate",
+    "prisma:migrate": "pnpm --filter api prisma migrate dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.8.2"
+  }
+}

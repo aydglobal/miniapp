@@ -1,0 +1,1 @@
+export function connectWallet(user){ return { address:'TON_ADDR' }; }

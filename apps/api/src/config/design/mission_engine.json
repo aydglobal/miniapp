@@ -1,0 +1,101 @@
+﻿[
+  {
+    "player_segment": "New user",
+    "primary_trigger": "Finished tutorial",
+    "recommended_next_quest": "Buy 2 starter cards and claim daily bonus",
+    "reason": "Teaches spend loop",
+    "reward_mix": "70% ADN / 30% energy",
+    "cooldown": "No cooldown",
+    "when_to_avoid": "If user already L4+",
+    "notes": "Keep copy short and encouraging",
+    "ai_prompt_hint": null
+  },
+  {
+    "player_segment": "Daily user",
+    "primary_trigger": "Claimed daily bonus",
+    "recommended_next_quest": "Play 3 short sessions today",
+    "reason": "Build habit density",
+    "reward_mix": "60% ADN / 40% streak XP",
+    "cooldown": "12h",
+    "when_to_avoid": "If session fatigue detected",
+    "notes": "Push consistency over grind",
+    "ai_prompt_hint": null
+  },
+  {
+    "player_segment": "Referral-focused",
+    "primary_trigger": "Completed referral stage",
+    "recommended_next_quest": "Invite 1 more friend who reaches L3",
+    "reason": "Extends social loop with quality filter",
+    "reward_mix": "50% ADN / 50% weight",
+    "cooldown": "18h",
+    "when_to_avoid": "If suspicious network score high",
+    "notes": "Reward active referrals only",
+    "ai_prompt_hint": null
+  },
+  {
+    "player_segment": "Cooling",
+    "primary_trigger": "No login for 36h",
+    "recommended_next_quest": "Return and finish 1 comeback mission",
+    "reason": "Reactivation before churn hardens",
+    "reward_mix": "40% ADN / 60% boost",
+    "cooldown": "24h",
+    "when_to_avoid": "If user opted out of notifications",
+    "notes": "Use loss aversion copy",
+    "ai_prompt_hint": null
+  },
+  {
+    "player_segment": "Active grinder",
+    "primary_trigger": "5+ sessions in 2 days",
+    "recommended_next_quest": "Upgrade one midgame exchange card",
+    "reason": "Convert activity into compounding",
+    "reward_mix": "80% ADN / 20% badge",
+    "cooldown": "8h",
+    "when_to_avoid": "If user short on ADN",
+    "notes": "Recommend best payback card",
+    "ai_prompt_hint": null
+  },
+  {
+    "player_segment": "Idle lover",
+    "primary_trigger": "Multiple offline claims",
+    "recommended_next_quest": "Increase idle cap via Liquidity Pool or Auto-Tap Drones",
+    "reason": "Supports preferred playstyle",
+    "reward_mix": "70% ADN / 30% idle boost",
+    "cooldown": "12h",
+    "when_to_avoid": "If passive cap already maxed",
+    "notes": "Offer comfort not grind",
+    "ai_prompt_hint": null
+  },
+  {
+    "player_segment": "Mid spender",
+    "primary_trigger": "Bought premium once",
+    "recommended_next_quest": "Unlock Premium Market synergy combo",
+    "reason": "Nudge repeat purchase without hard pressure",
+    "reward_mix": "40% ADN / 30% premium chest / 30% weight",
+    "cooldown": "24h",
+    "when_to_avoid": "If refund risk or low trust",
+    "notes": "Use soft-sell language",
+    "ai_prompt_hint": null
+  },
+  {
+    "player_segment": "Whale",
+    "primary_trigger": "Bought premium multiple times",
+    "recommended_next_quest": "Complete elite combo card upgrade",
+    "reason": "Retain high-value users",
+    "reward_mix": "30% ADN / 20% badge / 50% VIP perk",
+    "cooldown": "36h",
+    "when_to_avoid": "If progression cap reached",
+    "notes": "Focus prestige and exclusivity",
+    "ai_prompt_hint": null
+  },
+  {
+    "player_segment": "Suspicious",
+    "primary_trigger": "High fraud score",
+    "recommended_next_quest": "Manual review or trust-restoring mission",
+    "reason": "Reduce false positives and loss",
+    "reward_mix": "Mostly non-economic rewards",
+    "cooldown": "48h",
+    "when_to_avoid": "If already banned",
+    "notes": "Do not grant weight rewards",
+    "ai_prompt_hint": null
+  }
+]

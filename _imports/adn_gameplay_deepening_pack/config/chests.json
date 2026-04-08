@@ -1,0 +1,49 @@
+{
+  "rarities": [
+    {
+      "key": "common",
+      "weight": 55
+    },
+    {
+      "key": "rare",
+      "weight": 25
+    },
+    {
+      "key": "epic",
+      "weight": 12
+    },
+    {
+      "key": "legendary",
+      "weight": 6
+    },
+    {
+      "key": "mythic",
+      "weight": 2
+    }
+  ],
+  "chestTypes": [
+    {
+      "key": "free",
+      "cooldownHours": 4
+    },
+    {
+      "key": "mission",
+      "cooldownHours": 0
+    },
+    {
+      "key": "referral",
+      "cooldownHours": 0
+    },
+    {
+      "key": "premium",
+      "cooldownHours": 0
+    },
+    {
+      "key": "clan",
+      "cooldownHours": 24
+    }
+  ],
+  "jackpot": {
+    "chance": 0.0035
+  }
+}

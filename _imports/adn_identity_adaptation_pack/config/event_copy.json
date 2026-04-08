@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "key": "lucky_chest_night",
+      "title_tr": "Kara Gece Cache Operasyonu",
+      "title_en": "Black Night Cache Operation",
+      "subtitle_tr": "Nadir drop şansı yükseldi."
+    },
+    {
+      "key": "referral_rush_weekend",
+      "title_tr": "Ağ Genişletme Hafta Sonu",
+      "title_en": "Network Expansion Weekend",
+      "subtitle_tr": "Aktif operatörler normalden daha değerli."
+    },
+    {
+      "key": "prestige_week",
+      "title_tr": "Reboot Haftası",
+      "title_en": "Reboot Week",
+      "subtitle_tr": "Nebula Core kazanımı hızlandı."
+    },
+    {
+      "key": "clan_war_sprint",
+      "title_tr": "Syndicate Baskını",
+      "title_en": "Syndicate Raid",
+      "subtitle_tr": "Takım katkıları daha ağır puanlanıyor."
+    }
+  ]
+}

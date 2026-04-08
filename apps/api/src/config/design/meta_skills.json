@@ -1,0 +1,42 @@
+[
+  {
+    "key": "tap_mastery",
+    "name": "Tap Mastery",
+    "maxLevel": 25,
+    "baseCost": 1,
+    "costGrowth": 1.55,
+    "effectPerLevel": 0.02
+  },
+  {
+    "key": "crit_lab",
+    "name": "Crit Lab",
+    "maxLevel": 20,
+    "baseCost": 2,
+    "costGrowth": 1.6,
+    "effectPerLevel": 0.004
+  },
+  {
+    "key": "energy_reactor",
+    "name": "Energy Reactor",
+    "maxLevel": 20,
+    "baseCost": 1,
+    "costGrowth": 1.5,
+    "effectPerLevel": 0.03
+  },
+  {
+    "key": "offline_vault",
+    "name": "Offline Vault",
+    "maxLevel": 15,
+    "baseCost": 2,
+    "costGrowth": 1.65,
+    "effectPerLevel": 0.05
+  },
+  {
+    "key": "clan_honor",
+    "name": "Clan Honor",
+    "maxLevel": 15,
+    "baseCost": 3,
+    "costGrowth": 1.7,
+    "effectPerLevel": 0.04
+  }
+]

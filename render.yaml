@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: adn-web
+    runtime: static
+    rootDir: apps/web
+    buildCommand: cd /opt/render/project/src && npm install -g pnpm@9.15.0 && pnpm install --no-frozen-lockfile && pnpm --filter web build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+  - type: worker
+    name: adn-bot
+    runtime: node
+    rootDir: apps/bot
+    buildCommand: npm install
+    startCommand: npx tsx src/index.ts
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: MINIAPP_URL
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000

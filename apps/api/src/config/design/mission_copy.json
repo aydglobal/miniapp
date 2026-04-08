@@ -1,0 +1,34 @@
+{
+  "missionTitles": [
+    {
+      "old": "20 tap yap",
+      "new_tr": "İlk üretim döngünü tamamla",
+      "new_en": "Complete your first production cycle"
+    },
+    {
+      "old": "1 upgrade al",
+      "new_tr": "İlk modülünü devreye al",
+      "new_en": "Bring your first module online"
+    },
+    {
+      "old": "1 referral getir",
+      "new_tr": "Ağına ilk operatörü bağla",
+      "new_en": "Bring your first operator into the network"
+    },
+    {
+      "old": "100 coin kazan",
+      "new_tr": "İlk gerçek ADN akışını yakala",
+      "new_en": "Secure your first real ADN flow"
+    },
+    {
+      "old": "3 gün giriş yap",
+      "new_tr": "Akışı 3 gün boyunca sürdür",
+      "new_en": "Keep the flow alive for 3 days"
+    },
+    {
+      "old": "chest aç",
+      "new_tr": "İlk cache drop'u kır",
+      "new_en": "Crack your first cache drop"
+    }
+  ]
+}

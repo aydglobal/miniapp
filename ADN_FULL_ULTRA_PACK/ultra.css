@@ -1,0 +1,42 @@
+.tap-container {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tap-orb {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700, #ff9900);
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.6),
+              0 0 120px rgba(255, 200, 0, 0.3);
+  cursor: pointer;
+}
+
+.floating {
+  position: absolute;
+  color: #ffd700;
+  font-weight: bold;
+  pointer-events: none;
+  text-shadow: 0 0 10px gold;
+}
+
+.chest-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.chest-box {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.chest-reward {
+  font-size: 30px;
+  color: gold;
+  text-shadow: 0 0 20px gold;
+}

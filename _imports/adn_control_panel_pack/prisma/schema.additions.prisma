@@ -1,0 +1,51 @@
+model AdminConfig {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  valueJson   String
+  updatedBy   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AnalyticsDaily {
+  id                String   @id @default(cuid())
+  day               DateTime @unique
+  dau               Int      @default(0)
+  newUsers          Int      @default(0)
+  d1Retention       Float    @default(0)
+  d7Retention       Float    @default(0)
+  avgSessionMinutes Float    @default(0)
+  totalTaps         Int      @default(0)
+  totalRevenueXtr   Int      @default(0)
+  totalRevenueUsd   Float    @default(0)
+  chestOpenCount    Int      @default(0)
+  prestigeCount     Int      @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model LiveEventConfig {
+  id            String   @id @default(cuid())
+  key           String   @unique
+  title         String
+  startsAt      DateTime
+  endsAt        DateTime
+  isEnabled     Boolean  @default(true)
+  modifiersJson String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model NotificationCampaign {
+  id              String   @id @default(cuid())
+  key             String   @unique
+  title           String
+  messageTemplate String
+  audienceSegment String
+  status          String   @default("draft")
+  scheduledAt     DateTime?
+  sentCount       Int      @default(0)
+  clickCount      Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

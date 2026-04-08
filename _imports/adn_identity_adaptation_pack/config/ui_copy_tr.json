@@ -1,0 +1,56 @@
+{
+  "home": {
+    "heroTitle": "Start with nothing. Own everything.",
+    "heroSubtitle": "Sistemi kur, ağını büyüt, ADN akışını kontrol et.",
+    "smartActionTitle": "Şimdi en iyi hamle",
+    "phaseLabel": "Bulunduğun Faz",
+    "hourlyLabel": "Saatlik Akış",
+    "balanceLabel": "Toplam ADN",
+    "energyLabel": "Enerji",
+    "powerBoardLabel": "Güç Sıralaması",
+    "networkLabel": "Ağın",
+    "rebootLabel": "Reboot Hazırlığı"
+  },
+  "shop": {
+    "title": "Pazar",
+    "subtitle": "Operasyonunu büyütecek modülleri buradan kur.",
+    "buyButton": "Modülü Kur",
+    "lockedText": "Bu modül için daha fazla itibar gerekli."
+  },
+  "missions": {
+    "title": "Operasyonlar",
+    "subtitle": "Kısa vadeli hız için aktif operasyonları tamamla.",
+    "claimButton": "Ödülü Topla",
+    "goButton": "Operasyona Git"
+  },
+  "referral": {
+    "title": "Ağ Genişletme",
+    "subtitle": "Sadece aktif oyuncular gerçek ağ gücü sayılır.",
+    "copyCode": "Kodu Kopyala",
+    "activeNetwork": "Aktif Ağ",
+    "pendingFlow": "Bekleyen Akış"
+  },
+  "clan": {
+    "title": "Syndicate",
+    "subtitle": "Tek başına büyüme. Birlikte hükmet.",
+    "tasks": "Syndicate Operasyonları",
+    "contribution": "Katkı Oranın"
+  },
+  "prestige": {
+    "title": "Reboot Reactor",
+    "subtitle": "Mevcut sistemi bırak, daha güçlü geri dön.",
+    "cta": "Reboot Başlat",
+    "warning": "Mevcut modül seviyelerin sıfırlanır, ama Nebula Core kalıcı kalır."
+  },
+  "chest": {
+    "title": "Cache Vault",
+    "subtitle": "Düşük ihtimal, büyük sıçrama.",
+    "open": "Cache Aç",
+    "notReady": "Hazır Değil"
+  },
+  "event": {
+    "title": "Operasyon Etkinliği",
+    "live": "Canlı",
+    "endsIn": "Bitişine kalan"
+  }
+}

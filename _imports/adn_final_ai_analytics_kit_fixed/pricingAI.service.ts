@@ -1,0 +1,1 @@
+export function getPrice(base, user){ return base * 1.1; }

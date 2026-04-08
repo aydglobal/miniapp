@@ -1,0 +1,98 @@
+enum ReferralStatus {
+  pending
+  active
+  blocked
+  rewarded
+}
+
+model ReferralLink {
+  id              String         @id @default(cuid())
+  inviterUserId   String
+  invitedUserId   String         @unique
+  referralCode    String
+  status          ReferralStatus @default(pending)
+  qualityScore    Float          @default(0)
+  rewardGranted   Boolean        @default(false)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([inviterUserId, status])
+  @@index([referralCode])
+}
+
+model ReferralCode {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  code        String   @unique
+  uses        Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model NotificationPreference {
+  id                    String   @id @default(cuid())
+  userId                String   @unique
+  allowTaskReminders    Boolean  @default(true)
+  allowPromo            Boolean  @default(true)
+  allowEnergyAlerts     Boolean  @default(true)
+  allowReferralNudges   Boolean  @default(true)
+  quietHoursStart       Int?
+  quietHoursEnd         Int?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model NotificationLog {
+  id            String   @id @default(cuid())
+  userId        String
+  type          String
+  campaignKey   String?
+  title         String?
+  messageText   String
+  status        String   @default("queued")
+  sentAt        DateTime?
+  metadataJson  String?
+  createdAt     DateTime @default(now())
+
+  @@index([userId, type, createdAt])
+  @@index([status, createdAt])
+}
+
+model UserEngagementScore {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  engagementScore   Float    @default(0)
+  churnRisk         Float    @default(0)
+  segment           String   @default("warm")
+  sessions7d        Int      @default(0)
+  taps7d            Int      @default(0)
+  purchases30d      Int      @default(0)
+  referrals30d      Int      @default(0)
+  updatedAt         DateTime @updatedAt
+}
+
+model TutorialProgress {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  introSeen         Boolean  @default(false)
+  firstTapDone      Boolean  @default(false)
+  firstUpgradeDone  Boolean  @default(false)
+  firstMissionDone  Boolean  @default(false)
+  referralSeen      Boolean  @default(false)
+  completed         Boolean  @default(false)
+  updatedAt         DateTime @updatedAt
+}
+
+model LeaderboardSnapshot {
+  id                String   @id @default(cuid())
+  boardType         String
+  scopeKey          String?
+  rank              Int
+  userId            String
+  score             Float
+  trustMultiplier   Float    @default(1)
+  createdAt         DateTime @default(now())
+
+  @@index([boardType, scopeKey, rank])
+  @@index([userId, createdAt])
+}

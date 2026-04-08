@@ -1,0 +1,127 @@
+enum CurrencyCode {
+  ADN
+  TON
+  USDT
+  XTR
+}
+
+enum PaymentStatus {
+  pending
+  paid
+  failed
+  refunded
+  expired
+}
+
+enum PaymentProvider {
+  telegram_stars
+  manual
+}
+
+enum WithdrawalStatus {
+  pending
+  under_review
+  approved
+  sent
+  rejected
+  reversed
+}
+
+enum PremiumGrantType {
+  boost
+  battle_pass
+  chest
+  skin
+  ad_free
+}
+
+model UserWallet {
+  id                    String   @id @default(cuid())
+  userId                String   @unique
+  coins                 Int      @default(0)
+  adnBalance            Int      @default(0)
+  eligibleRewardBalance Decimal  @default(0) @db.Decimal(18, 6)
+  lockedRewardBalance   Decimal  @default(0) @db.Decimal(18, 6)
+  withdrawnTotal        Decimal  @default(0) @db.Decimal(18, 6)
+  lifetimeSpentStars    Int      @default(0)
+  lifetimeRevenueStars  Int      @default(0)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Payment {
+  id                  String           @id @default(cuid())
+  userId              String
+  provider            PaymentProvider
+  status              PaymentStatus    @default(pending)
+  currency            CurrencyCode
+  amount              Int
+  productKey          String
+  productLabel        String
+  telegramChargeId    String?
+  providerChargeId    String?
+  invoicePayload      String           @unique
+  metadataJson        String?
+  paidAt              DateTime?
+  createdAt           DateTime         @default(now())
+  updatedAt           DateTime         @updatedAt
+
+  user                User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status, createdAt])
+  @@index([provider, status, createdAt])
+}
+
+model PremiumGrant {
+  id              String           @id @default(cuid())
+  userId          String
+  paymentId       String?
+  grantType       PremiumGrantType
+  grantKey        String
+  level           Int              @default(1)
+  quantity        Int              @default(1)
+  expiresAt       DateTime?
+  metadataJson    String?
+  createdAt       DateTime         @default(now())
+
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  payment         Payment?         @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  @@index([userId, grantType, createdAt])
+}
+
+model WithdrawalRequest {
+  id                 String            @id @default(cuid())
+  userId             String
+  status             WithdrawalStatus  @default(pending)
+  currency           CurrencyCode
+  amount             Decimal           @db.Decimal(18, 6)
+  destinationAddress String
+  reviewReason       String?
+  rejectionReason    String?
+  approvedAt         DateTime?
+  sentAt             DateTime?
+  externalTxId       String?
+  riskScore          Float             @default(0)
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+
+  user               User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status, createdAt])
+  @@index([status, createdAt])
+}
+
+model RevenueDailySnapshot {
+  id                String   @id @default(cuid())
+  dateKey           String   @unique
+  grossStars        Int      @default(0)
+  paidPayments      Int      @default(0)
+  refundCount       Int      @default(0)
+  pendingWithdrawals Int     @default(0)
+  sentWithdrawals   Int      @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}

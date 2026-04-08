@@ -1,0 +1,708 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum BoostType {
+  tap_x2
+  energy_cap
+  regen_x2
+  tap_x5
+  combo_lock
+  crit_boost
+  vip_weekly
+  event_pass
+}
+
+enum BoostSource {
+  coins
+  daily_free
+  premium
+  admin
+  auto_worker
+  referral
+}
+
+enum BoostLogAction {
+  buy
+  level_up
+  free_claim
+  premium_pending
+  premium_paid
+  premium_failed
+  expire
+  auto_tap_tick
+  admin_grant
+}
+
+enum PaymentProvider {
+  telegram_stars
+}
+
+enum PaymentStatus {
+  pending
+  paid
+  failed
+  refunded
+  expired
+}
+
+enum ReferralStatus {
+  pending
+  approved
+  rejected
+  blocked
+}
+
+enum UserStatus {
+  active
+  banned
+  locked
+}
+
+enum FraudCaseStatus {
+  open
+  reviewing
+  resolved
+  false_positive
+}
+
+enum WithdrawalStatus {
+  pending
+  approved
+  rejected
+  paid
+}
+
+enum BalanceBucket {
+  coins
+  adn
+  eligible_reward
+  locked_reward
+}
+
+enum DeviceTrustStatus {
+  trusted
+  unknown
+  risky
+  blocked
+}
+
+enum IdempotencyStatus {
+  processing
+  completed
+  failed
+}
+
+enum ClanRole {
+  owner
+  officer
+  member
+}
+
+enum ReferralQuestRewardType {
+  coins
+  eligible_reward_balance
+}
+
+model User {
+  id                   String   @id @default(cuid())
+  telegramId           String   @unique
+  displayName          String
+  username             String?
+  coins                Int      @default(0)
+  xp                   Int      @default(0)
+  totalTaps            Int      @default(0)
+  energy               Int      @default(500)
+  maxEnergy            Int      @default(500)
+  lastEnergyAt         DateTime @default(now())
+  tapXpReward          Int      @default(1)
+  tapNonce             Int      @default(0)
+  lastTapAt            DateTime?
+  tapWindowStart       DateTime?
+  tapsInWindow         Int      @default(0)
+  suspiciousScore      Int      @default(0)
+  trustScore           Float    @default(1)
+  status               UserStatus @default(active)
+  isAdmin              Boolean  @default(false)
+  isBanned             Boolean  @default(false)
+  isFraudLocked        Boolean  @default(false)
+  fraudLockedUntil     DateTime?
+  bannedAt             DateTime?
+  banReason            String?
+  lastSeenAt           DateTime?
+  fraudFlags           String[] @default([])
+  isTapLockedUntil     DateTime?
+  lastBoostBuyAt       DateTime?
+  lastSeenIpHash       String?
+  ipHash               String?
+  countryCode          String?
+  deviceFingerprint    String?
+  dailyFreeBoostClaimAt DateTime?
+  loginStreak          Int      @default(0)
+  lastLoginDate        DateTime?
+  dailyStreak          Int      @default(0)
+  lastDailyClaimAt     DateTime?
+  pricingVariant       String   @default("control")
+  level                Int      @default(1)
+  tapPower             Int      @default(1)
+  passiveIncomePerHour Int      @default(0)
+  pendingPassiveIncome Int      @default(0)
+  totalPassiveClaimed  Int      @default(0)
+  totalLifetimeCoins   Int      @default(0)
+  lastPassiveIncomeAt  DateTime?
+  offlineCapHours      Float    @default(3)
+  referralCode         String   @unique
+  referredByCode       String?
+  referralRewardsGiven Int      @default(0)
+  firstPaidAt          DateTime?
+  prestigePower        Int      @default(0)
+  nebulaCore           Int      @default(0)
+  metaTapMastery       Int      @default(0)
+  metaCritLab          Int      @default(0)
+  metaEnergyReactor    Int      @default(0)
+  metaOfflineVault     Int      @default(0)
+  metaClanHonor        Int      @default(0)
+  adnBalance           Int      @default(0)
+  eligibleRewardBalance Int      @default(0)
+  adminRole            String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  deletedAt            DateTime?
+
+  tasks TaskProgress[]
+  boosts UserBoost[]
+  boostLogs BoostLog[]
+  payments Payment[]
+  referralsSent Referral[] @relation("referrer")
+  referralEdge Referral[] @relation("invitee")
+  fraudCases FraudCase[]
+  adminActions AdminAction[] @relation("AdminActor")
+  withdrawalRequests WithdrawalRequest[]
+  referralQuestProgresses ReferralQuestProgress[]
+  taskAssignments TaskAssignment[]
+  ownedUpgrades UserUpgrade[]
+  missions UserMission[]
+  tutorialProgress TutorialProgress?
+  ledgerEntries WalletLedgerEntry[]
+  devices UserDevice[]
+  idempotencyKeys IdempotencyKey[]
+  ownedClans Clan[] @relation("ClanOwner")
+  clanMembership ClanMember?
+  chests UserChest[]
+  engagementScore UserEngagementScore?
+  notificationLogs NotificationLog[]
+
+  @@index([username])
+  @@index([lastSeenAt])
+  @@index([suspiciousScore])
+}
+
+model Task {
+  id          String         @id @default(cuid())
+  code        String         @unique
+  title       String
+  description String
+  rewardCoins Int
+  isActive    Boolean        @default(true)
+  progresses  TaskProgress[]
+}
+
+model TaskProgress {
+  id        String   @id @default(cuid())
+  userId    String
+  taskId    String
+  completed Boolean  @default(false)
+  claimed   Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  task Task @relation(fields: [taskId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, taskId])
+}
+
+model UserBoost {
+  id        String    @id @default(cuid())
+  userId    String
+  type      BoostType
+  level     Int       @default(0)
+  startsAt  DateTime?
+  expiresAt DateTime?
+  isActive  Boolean   @default(false)
+  lastTickAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, type])
+  @@index([userId, type])
+  @@index([expiresAt])
+}
+
+model BoostLog {
+  id          String         @id @default(cuid())
+  userId      String
+  boostType   BoostType
+  action      BoostLogAction
+  source      BoostSource
+  levelBefore Int?
+  levelAfter  Int?
+  coinsSpent  Int?
+  coinsAwarded Int?
+  paymentId   String?
+  meta        Json?
+  createdAt   DateTime       @default(now())
+
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  payment Payment? @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([boostType, action])
+}
+
+model Referral {
+  id                String         @id @default(cuid())
+  referrerUserId    String
+  inviteeUserId     String         @unique
+  status            ReferralStatus @default(pending)
+  inviteeIpHash     String?
+  inviteeDeviceHash String?
+  rewardCoins       Int            @default(0)
+  rejectionReason   String?
+  approvedAt        DateTime?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+
+  referrer User @relation("referrer", fields: [referrerUserId], references: [id], onDelete: Cascade)
+  invitee  User @relation("invitee", fields: [inviteeUserId], references: [id], onDelete: Cascade)
+
+  @@index([referrerUserId, status])
+}
+
+model ExperimentPriceOverride {
+  id         String    @id @default(cuid())
+  variant    String
+  boostType  BoostType
+  multiplier Float     @default(1)
+  isActive   Boolean   @default(true)
+  startsAt   DateTime  @default(now())
+  endsAt     DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  @@unique([variant, boostType])
+  @@index([variant, isActive])
+}
+
+model FraudCase {
+  id                String          @id @default(cuid())
+  userId            String
+  riskType          String
+  score             Int             @default(0)
+  status            FraudCaseStatus @default(open)
+  title             String
+  details           Json?
+  detectedAt        DateTime        @default(now())
+  reviewedAt        DateTime?
+  reviewedByAdminId String?
+  note              String?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([status, detectedAt])
+  @@index([userId])
+}
+
+model AdminAction {
+  id           String   @id @default(cuid())
+  adminId      String
+  targetUserId String?
+  action       String
+  reason       String?
+  meta         Json?
+  createdAt    DateTime @default(now())
+
+  admin User @relation("AdminActor", fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@index([adminId, createdAt])
+  @@index([targetUserId, createdAt])
+}
+
+model Payment {
+  id                  String          @id @default(cuid())
+  userId              String
+  provider            PaymentProvider
+  status              PaymentStatus   @default(pending)
+  currency            String
+  amount              Int
+  externalInvoiceLink String?
+  externalChargeId    String?         @unique
+  payload             String          @unique
+  itemType            String
+  itemRef             String
+  metadata            Json?
+  expiresAt           DateTime?
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+
+  user User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  logs BoostLog[]
+
+  @@index([userId, status])
+  @@index([payload])
+  @@index([userId, status, createdAt])
+}
+
+model WithdrawalRequest {
+  id                String           @id @default(cuid())
+  userId            String
+  method            String
+  amountCoins       Int
+  amountPayout      Float
+  payoutAddress     String
+  status            WithdrawalStatus @default(pending)
+  riskScore         Int              @default(0)
+  adminNotes        String?
+  reviewedByAdminId String?
+  reviewedAt        DateTime?
+  paidAt            DateTime?
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status])
+  @@index([status, createdAt])
+}
+
+model ABTest {
+  id            String    @id @default(cuid())
+  key           String    @unique
+  title         String
+  description   String?
+  variantCount  Int       @default(2)
+  status        String    @default("active")
+  winnerVariant Int?
+  startedAt     DateTime  @default(now())
+  concludedAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  assignments UserABTestAssignment[]
+}
+
+model UserABTestAssignment {
+  id        String   @id @default(cuid())
+  userId    String
+  testId    String
+  variant   Int
+  createdAt DateTime @default(now())
+
+  test ABTest @relation(fields: [testId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, testId])
+  @@index([testId, variant])
+}
+
+model ReferralQuestTemplate {
+  id          String                   @id @default(cuid())
+  key         String                   @unique
+  title       String
+  description String
+  type        String
+  targetValue Int
+  rewardType  ReferralQuestRewardType
+  rewardValue Int
+  isActive    Boolean                  @default(true)
+  createdAt   DateTime                 @default(now())
+  updatedAt   DateTime                 @updatedAt
+
+  progresses ReferralQuestProgress[]
+}
+
+model ReferralQuestProgress {
+  id          String               @id @default(cuid())
+  userId      String
+  templateId  String
+  progress    Int                  @default(0)
+  assignedAt  DateTime             @default(now())
+  completedAt DateTime?
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  template ReferralQuestTemplate @relation(fields: [templateId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, templateId])
+}
+
+model TaskAssignment {
+  id          String   @id @default(cuid())
+  userId      String
+  title       String
+  description String
+  category    String
+  source      String
+  payloadJson String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, isActive])
+}
+
+model UserUpgrade {
+  id              String   @id @default(cuid())
+  userId          String
+  cardKey         String
+  level           Int      @default(0)
+  totalHourlyGain Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, cardKey])
+  @@index([userId, level])
+}
+
+model UserMission {
+  id              String   @id @default(cuid())
+  userId          String
+  key             String
+  title           String
+  description     String
+  category        String
+  eventType       String
+  targetValue     Int
+  progress        Int      @default(0)
+  rewardCoins     Int
+  rewardXp        Int      @default(0)
+  status          String   @default("active")
+  completedAt     DateTime?
+  rewardClaimedAt DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, key])
+  @@index([userId, status, eventType])
+}
+
+model TutorialProgress {
+  id               String   @id @default(cuid())
+  userId           String   @unique
+  introSeen        Boolean  @default(false)
+  firstTapDone     Boolean  @default(false)
+  firstUpgradeDone Boolean  @default(false)
+  firstMissionDone Boolean  @default(false)
+  referralSeen     Boolean  @default(false)
+  completed        Boolean  @default(false)
+  updatedAt        DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model WalletLedgerEntry {
+  id            String        @id @default(cuid())
+  userId        String
+  entryType     String
+  bucket        BalanceBucket
+  amount        Int
+  balanceBefore Int
+  balanceAfter  Int
+  reason        String
+  refType       String?
+  refId         String?
+  metadataJson  String?
+  createdAt     DateTime      @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([entryType, createdAt])
+  @@index([userId, entryType, createdAt])
+}
+
+model UserDevice {
+  id            String            @id @default(cuid())
+  userId        String
+  fingerprint   String
+  platform      String?
+  appVersion    String?
+  firstSeenAt   DateTime          @default(now())
+  lastSeenAt    DateTime          @default(now())
+  totalSessions Int               @default(1)
+  trustStatus   DeviceTrustStatus @default(unknown)
+  riskFlagsJson String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, fingerprint])
+  @@index([fingerprint])
+  @@index([trustStatus])
+}
+
+model IdempotencyKey {
+  id             String            @id @default(cuid())
+  userId         String
+  scope          String
+  idempotencyKey String
+  requestHash    String
+  status         IdempotencyStatus @default(processing)
+  responseJson   String?
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, scope, idempotencyKey])
+  @@index([status, createdAt])
+}
+
+model Clan {
+  id         String       @id @default(cuid())
+  slug       String       @unique
+  name       String
+  description String?
+  ownerId    String
+  totalScore Int          @default(0)
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+
+  owner   User         @relation("ClanOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  members ClanMember[]
+
+  @@index([totalScore, createdAt])
+}
+
+model ClanMember {
+  id               String   @id @default(cuid())
+  clanId           String
+  userId           String   @unique
+  role             ClanRole @default(member)
+  contributedScore Int      @default(0)
+  joinedAt         DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  clan Clan @relation(fields: [clanId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([clanId, userId])
+  @@index([clanId, contributedScore])
+}
+
+model UserChest {
+  id           String   @id @default(cuid())
+  userId       String
+  source       String
+  rarity       String
+  rewardCoins  Int
+  shards       Int      @default(0)
+  boostMinutes Int      @default(0)
+  status       String   @default("ready")
+  openedAt     DateTime?
+  createdAt    DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status, createdAt])
+}
+
+model UserEngagementScore {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  engagementScore Float    @default(0)
+  churnRisk       Float    @default(0)
+  segment         String   @default("warm")
+  sessions7d      Int      @default(0)
+  taps7d          Int      @default(0)
+  purchases30d    Int      @default(0)
+  referrals30d    Int      @default(0)
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model NotificationLog {
+  id           String    @id @default(cuid())
+  userId       String
+  type         String
+  campaignKey  String?
+  title        String?
+  messageText  String
+  status       String    @default("queued")
+  sentAt       DateTime?
+  metadataJson String?
+  createdAt    DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, type, createdAt])
+  @@index([status, createdAt])
+  @@index([userId, status, createdAt])
+}
+
+model AdminConfig {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  valueJson String
+  updatedBy String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AnalyticsDaily {
+  id                String   @id @default(cuid())
+  day               DateTime @unique
+  dau               Int      @default(0)
+  newUsers          Int      @default(0)
+  d1Retention       Float    @default(0)
+  d7Retention       Float    @default(0)
+  avgSessionMinutes Float    @default(0)
+  totalTaps         Int      @default(0)
+  totalRevenueXtr   Int      @default(0)
+  totalRevenueUsd   Float    @default(0)
+  chestOpenCount    Int      @default(0)
+  prestigeCount     Int      @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model LiveEventConfig {
+  id            String    @id @default(cuid())
+  key           String    @unique
+  title         String
+  startsAt      DateTime
+  endsAt        DateTime
+  isEnabled     Boolean   @default(true)
+  modifiersJson String
+  deletedAt     DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model NotificationCampaign {
+  id              String    @id @default(cuid())
+  key             String    @unique
+  title           String
+  messageTemplate String
+  audienceSegment String
+  status          String    @default("draft")
+  scheduledAt     DateTime?
+  sentCount       Int       @default(0)
+  clickCount      Int       @default(0)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}

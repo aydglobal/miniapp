@@ -1,0 +1,59 @@
+{
+  "phases": [
+    {
+      "key": "street",
+      "name": "Sokak",
+      "levelRange": [
+        1,
+        7
+      ],
+      "theme": "Elle çalışma, ilk ADN akışı, temel hayatta kalma",
+      "playerFeeling": "Hiçbir şeyin yok ama büyüme ihtimali var.",
+      "uiTone": "ham, düşük statü, küçük hedefler"
+    },
+    {
+      "key": "setup",
+      "name": "Kurulum",
+      "levelRange": [
+        8,
+        18
+      ],
+      "theme": "İlk modüller, ilk otomasyon, ilk ciddi yatırım",
+      "playerFeeling": "Artık bir sistem kuruyorsun.",
+      "uiTone": "kontrol artıyor, ilk görünür güç"
+    },
+    {
+      "key": "operation",
+      "name": "Operasyon",
+      "levelRange": [
+        19,
+        35
+      ],
+      "theme": "İşleyen ağ, referral kalitesi, yüksek saatlik gelir",
+      "playerFeeling": "Birey değil, işletme gibi oynuyorsun.",
+      "uiTone": "daha kurumsal, daha agresif büyüme"
+    },
+    {
+      "key": "empire",
+      "name": "İmparatorluk",
+      "levelRange": [
+        36,
+        60
+      ],
+      "theme": "Prestige, meta büyüme, event dominasyonu",
+      "playerFeeling": "Artık sadece kazanmıyor, yönetiyorsun.",
+      "uiTone": "prestijli, elit, dramatik"
+    },
+    {
+      "key": "nebula_lord",
+      "name": "Nebula Lord",
+      "levelRange": [
+        61,
+        999
+      ],
+      "theme": "Reality layer, endgame, global kontrol",
+      "playerFeeling": "Ekonominin parçası değil, ekonominin kendisisin.",
+      "uiTone": "kozmik, soğuk, üstünlük hissi"
+    }
+  ]
+}

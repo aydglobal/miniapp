@@ -1,0 +1,1 @@
+export function prestigeBonus(level){ return 1+level*0.05; }

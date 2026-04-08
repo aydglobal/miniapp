@@ -1,0 +1,14 @@
+{
+  "home": {
+    "heroTitle": "Start with nothing. Own everything.",
+    "heroSubtitle": "Build your system, expand your network, control the ADN flow.",
+    "smartActionTitle": "Best move right now",
+    "phaseLabel": "Current Phase",
+    "hourlyLabel": "Hourly Flow",
+    "balanceLabel": "Total ADN",
+    "energyLabel": "Energy",
+    "powerBoardLabel": "Power Board",
+    "networkLabel": "Your Network",
+    "rebootLabel": "Reboot Readiness"
+  }
+}

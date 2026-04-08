@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: adn-api
+    runtime: node
+    buildCommand: npm ci && npx prisma generate && npm run build
+    startCommand: npx prisma db push --accept-data-loss && npm start
+    healthCheckPath: /health

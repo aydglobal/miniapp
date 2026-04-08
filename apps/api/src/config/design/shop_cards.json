@@ -1,0 +1,2582 @@
+﻿[
+  {
+    "id": "tap_engine",
+    "name": "Tap Engine",
+    "category": "Mining",
+    "unlockLevel": 1,
+    "secondaryEffect": "Tap multiplier",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 50,
+        "addedHourlyADN": 15,
+        "paybackHours": 3.33,
+        "phase": "Starter",
+        "efficiencyScore": 300.0
+      },
+      {
+        "tier": 2,
+        "costADN": 67,
+        "addedHourlyADN": 18,
+        "paybackHours": 3.72,
+        "phase": "Starter",
+        "efficiencyScore": 268.66
+      },
+      {
+        "tier": 3,
+        "costADN": 90,
+        "addedHourlyADN": 21,
+        "paybackHours": 4.29,
+        "phase": "Starter",
+        "efficiencyScore": 233.33
+      },
+      {
+        "tier": 4,
+        "costADN": 120,
+        "addedHourlyADN": 25,
+        "paybackHours": 4.8,
+        "phase": "Starter",
+        "efficiencyScore": 208.33
+      },
+      {
+        "tier": 5,
+        "costADN": 161,
+        "addedHourlyADN": 30,
+        "paybackHours": 5.37,
+        "phase": "Starter",
+        "efficiencyScore": 186.34
+      },
+      {
+        "tier": 6,
+        "costADN": 216,
+        "addedHourlyADN": 36,
+        "paybackHours": 6.0,
+        "phase": "Starter",
+        "efficiencyScore": 166.67
+      },
+      {
+        "tier": 7,
+        "costADN": 289,
+        "addedHourlyADN": 43,
+        "paybackHours": 6.72,
+        "phase": "Starter",
+        "efficiencyScore": 148.79
+      },
+      {
+        "tier": 8,
+        "costADN": 388,
+        "addedHourlyADN": 51,
+        "paybackHours": 7.61,
+        "phase": "Starter",
+        "efficiencyScore": 131.44
+      },
+      {
+        "tier": 9,
+        "costADN": 520,
+        "addedHourlyADN": 60,
+        "paybackHours": 8.67,
+        "phase": "Starter",
+        "efficiencyScore": 115.38
+      },
+      {
+        "tier": 10,
+        "costADN": 696,
+        "addedHourlyADN": 72,
+        "paybackHours": 9.67,
+        "phase": "Starter",
+        "efficiencyScore": 103.45
+      },
+      {
+        "tier": 11,
+        "costADN": 933,
+        "addedHourlyADN": 85,
+        "paybackHours": 10.98,
+        "phase": "Starter",
+        "efficiencyScore": 91.1
+      },
+      {
+        "tier": 12,
+        "costADN": 1251,
+        "addedHourlyADN": 102,
+        "paybackHours": 12.26,
+        "phase": "Starter",
+        "efficiencyScore": 81.53
+      },
+      {
+        "tier": 13,
+        "costADN": 1676,
+        "addedHourlyADN": 121,
+        "paybackHours": 13.85,
+        "phase": "Starter",
+        "efficiencyScore": 72.2
+      },
+      {
+        "tier": 14,
+        "costADN": 2246,
+        "addedHourlyADN": 144,
+        "paybackHours": 15.6,
+        "phase": "Starter",
+        "efficiencyScore": 64.11
+      },
+      {
+        "tier": 15,
+        "costADN": 3009,
+        "addedHourlyADN": 171,
+        "paybackHours": 17.6,
+        "phase": "Starter",
+        "efficiencyScore": 56.83
+      }
+    ]
+  },
+  {
+    "id": "gpu_cluster",
+    "name": "GPU Cluster",
+    "category": "Mining",
+    "unlockLevel": 2,
+    "secondaryEffect": "Energy restore",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 120,
+        "addedHourlyADN": 30,
+        "paybackHours": 4.0,
+        "phase": "Starter",
+        "efficiencyScore": 250.0
+      },
+      {
+        "tier": 2,
+        "costADN": 162,
+        "addedHourlyADN": 36,
+        "paybackHours": 4.5,
+        "phase": "Starter",
+        "efficiencyScore": 222.22
+      },
+      {
+        "tier": 3,
+        "costADN": 219,
+        "addedHourlyADN": 43,
+        "paybackHours": 5.09,
+        "phase": "Starter",
+        "efficiencyScore": 196.35
+      },
+      {
+        "tier": 4,
+        "costADN": 295,
+        "addedHourlyADN": 52,
+        "paybackHours": 5.67,
+        "phase": "Starter",
+        "efficiencyScore": 176.27
+      },
+      {
+        "tier": 5,
+        "costADN": 399,
+        "addedHourlyADN": 62,
+        "paybackHours": 6.44,
+        "phase": "Starter",
+        "efficiencyScore": 155.39
+      },
+      {
+        "tier": 6,
+        "costADN": 538,
+        "addedHourlyADN": 75,
+        "paybackHours": 7.17,
+        "phase": "Starter",
+        "efficiencyScore": 139.41
+      },
+      {
+        "tier": 7,
+        "costADN": 726,
+        "addedHourlyADN": 90,
+        "paybackHours": 8.07,
+        "phase": "Starter",
+        "efficiencyScore": 123.97
+      },
+      {
+        "tier": 8,
+        "costADN": 981,
+        "addedHourlyADN": 107,
+        "paybackHours": 9.17,
+        "phase": "Starter",
+        "efficiencyScore": 109.07
+      },
+      {
+        "tier": 9,
+        "costADN": 1324,
+        "addedHourlyADN": 129,
+        "paybackHours": 10.26,
+        "phase": "Starter",
+        "efficiencyScore": 97.43
+      },
+      {
+        "tier": 10,
+        "costADN": 1787,
+        "addedHourlyADN": 155,
+        "paybackHours": 11.53,
+        "phase": "Starter",
+        "efficiencyScore": 86.74
+      },
+      {
+        "tier": 11,
+        "costADN": 2413,
+        "addedHourlyADN": 186,
+        "paybackHours": 12.97,
+        "phase": "Starter",
+        "efficiencyScore": 77.08
+      },
+      {
+        "tier": 12,
+        "costADN": 3257,
+        "addedHourlyADN": 223,
+        "paybackHours": 14.61,
+        "phase": "Starter",
+        "efficiencyScore": 68.47
+      },
+      {
+        "tier": 13,
+        "costADN": 4397,
+        "addedHourlyADN": 267,
+        "paybackHours": 16.47,
+        "phase": "Starter",
+        "efficiencyScore": 60.72
+      },
+      {
+        "tier": 14,
+        "costADN": 5936,
+        "addedHourlyADN": 321,
+        "paybackHours": 18.49,
+        "phase": "Starter",
+        "efficiencyScore": 54.08
+      },
+      {
+        "tier": 15,
+        "costADN": 8014,
+        "addedHourlyADN": 385,
+        "paybackHours": 20.82,
+        "phase": "Starter",
+        "efficiencyScore": 48.04
+      }
+    ]
+  },
+  {
+    "id": "referral_hub",
+    "name": "Referral Hub",
+    "category": "Community",
+    "unlockLevel": 3,
+    "secondaryEffect": "Referral bonus",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 180,
+        "addedHourlyADN": 40,
+        "paybackHours": 4.5,
+        "phase": "Starter",
+        "efficiencyScore": 222.22
+      },
+      {
+        "tier": 2,
+        "costADN": 239,
+        "addedHourlyADN": 47,
+        "paybackHours": 5.09,
+        "phase": "Starter",
+        "efficiencyScore": 196.65
+      },
+      {
+        "tier": 3,
+        "costADN": 318,
+        "addedHourlyADN": 56,
+        "paybackHours": 5.68,
+        "phase": "Starter",
+        "efficiencyScore": 176.1
+      },
+      {
+        "tier": 4,
+        "costADN": 423,
+        "addedHourlyADN": 66,
+        "paybackHours": 6.41,
+        "phase": "Starter",
+        "efficiencyScore": 156.03
+      },
+      {
+        "tier": 5,
+        "costADN": 563,
+        "addedHourlyADN": 78,
+        "paybackHours": 7.22,
+        "phase": "Starter",
+        "efficiencyScore": 138.54
+      },
+      {
+        "tier": 6,
+        "costADN": 749,
+        "addedHourlyADN": 92,
+        "paybackHours": 8.14,
+        "phase": "Starter",
+        "efficiencyScore": 122.83
+      },
+      {
+        "tier": 7,
+        "costADN": 996,
+        "addedHourlyADN": 108,
+        "paybackHours": 9.22,
+        "phase": "Starter",
+        "efficiencyScore": 108.43
+      },
+      {
+        "tier": 8,
+        "costADN": 1325,
+        "addedHourlyADN": 127,
+        "paybackHours": 10.43,
+        "phase": "Starter",
+        "efficiencyScore": 95.85
+      },
+      {
+        "tier": 9,
+        "costADN": 1762,
+        "addedHourlyADN": 150,
+        "paybackHours": 11.75,
+        "phase": "Starter",
+        "efficiencyScore": 85.13
+      },
+      {
+        "tier": 10,
+        "costADN": 2344,
+        "addedHourlyADN": 177,
+        "paybackHours": 13.24,
+        "phase": "Starter",
+        "efficiencyScore": 75.51
+      },
+      {
+        "tier": 11,
+        "costADN": 3117,
+        "addedHourlyADN": 209,
+        "paybackHours": 14.91,
+        "phase": "Starter",
+        "efficiencyScore": 67.05
+      },
+      {
+        "tier": 12,
+        "costADN": 4146,
+        "addedHourlyADN": 247,
+        "paybackHours": 16.79,
+        "phase": "Starter",
+        "efficiencyScore": 59.58
+      },
+      {
+        "tier": 13,
+        "costADN": 5514,
+        "addedHourlyADN": 292,
+        "paybackHours": 18.88,
+        "phase": "Starter",
+        "efficiencyScore": 52.96
+      },
+      {
+        "tier": 14,
+        "costADN": 7334,
+        "addedHourlyADN": 344,
+        "paybackHours": 21.32,
+        "phase": "Starter",
+        "efficiencyScore": 46.9
+      },
+      {
+        "tier": 15,
+        "costADN": 9754,
+        "addedHourlyADN": 406,
+        "paybackHours": 24.02,
+        "phase": "Starter",
+        "efficiencyScore": 41.62
+      }
+    ]
+  },
+  {
+    "id": "liquidity_pool",
+    "name": "Liquidity Pool",
+    "category": "Exchange",
+    "unlockLevel": 4,
+    "secondaryEffect": "Offline yield",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 220,
+        "addedHourlyADN": 50,
+        "paybackHours": 4.4,
+        "phase": "Starter",
+        "efficiencyScore": 227.27
+      },
+      {
+        "tier": 2,
+        "costADN": 295,
+        "addedHourlyADN": 60,
+        "paybackHours": 4.92,
+        "phase": "Starter",
+        "efficiencyScore": 203.39
+      },
+      {
+        "tier": 3,
+        "costADN": 395,
+        "addedHourlyADN": 71,
+        "paybackHours": 5.56,
+        "phase": "Starter",
+        "efficiencyScore": 179.75
+      },
+      {
+        "tier": 4,
+        "costADN": 529,
+        "addedHourlyADN": 84,
+        "paybackHours": 6.3,
+        "phase": "Starter",
+        "efficiencyScore": 158.79
+      },
+      {
+        "tier": 5,
+        "costADN": 709,
+        "addedHourlyADN": 100,
+        "paybackHours": 7.09,
+        "phase": "Starter",
+        "efficiencyScore": 141.04
+      },
+      {
+        "tier": 6,
+        "costADN": 950,
+        "addedHourlyADN": 119,
+        "paybackHours": 7.98,
+        "phase": "Starter",
+        "efficiencyScore": 125.26
+      },
+      {
+        "tier": 7,
+        "costADN": 1274,
+        "addedHourlyADN": 142,
+        "paybackHours": 8.97,
+        "phase": "Starter",
+        "efficiencyScore": 111.46
+      },
+      {
+        "tier": 8,
+        "costADN": 1707,
+        "addedHourlyADN": 169,
+        "paybackHours": 10.1,
+        "phase": "Starter",
+        "efficiencyScore": 99.0
+      },
+      {
+        "tier": 9,
+        "costADN": 2287,
+        "addedHourlyADN": 201,
+        "paybackHours": 11.38,
+        "phase": "Starter",
+        "efficiencyScore": 87.89
+      },
+      {
+        "tier": 10,
+        "costADN": 3065,
+        "addedHourlyADN": 239,
+        "paybackHours": 12.82,
+        "phase": "Starter",
+        "efficiencyScore": 77.98
+      },
+      {
+        "tier": 11,
+        "costADN": 4106,
+        "addedHourlyADN": 285,
+        "paybackHours": 14.41,
+        "phase": "Starter",
+        "efficiencyScore": 69.41
+      },
+      {
+        "tier": 12,
+        "costADN": 5503,
+        "addedHourlyADN": 339,
+        "paybackHours": 16.23,
+        "phase": "Starter",
+        "efficiencyScore": 61.6
+      },
+      {
+        "tier": 13,
+        "costADN": 7374,
+        "addedHourlyADN": 403,
+        "paybackHours": 18.3,
+        "phase": "Starter",
+        "efficiencyScore": 54.65
+      },
+      {
+        "tier": 14,
+        "costADN": 9881,
+        "addedHourlyADN": 480,
+        "paybackHours": 20.59,
+        "phase": "Starter",
+        "efficiencyScore": 48.58
+      },
+      {
+        "tier": 15,
+        "costADN": 13240,
+        "addedHourlyADN": 571,
+        "paybackHours": 23.19,
+        "phase": "Starter",
+        "efficiencyScore": 43.13
+      }
+    ]
+  },
+  {
+    "id": "streak_vault",
+    "name": "Streak Vault",
+    "category": "Community",
+    "unlockLevel": 5,
+    "secondaryEffect": "Daily bonus",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 320,
+        "addedHourlyADN": 70,
+        "paybackHours": 4.57,
+        "phase": "Starter",
+        "efficiencyScore": 218.75
+      },
+      {
+        "tier": 2,
+        "costADN": 432,
+        "addedHourlyADN": 83,
+        "paybackHours": 5.2,
+        "phase": "Starter",
+        "efficiencyScore": 192.13
+      },
+      {
+        "tier": 3,
+        "costADN": 583,
+        "addedHourlyADN": 99,
+        "paybackHours": 5.89,
+        "phase": "Starter",
+        "efficiencyScore": 169.81
+      },
+      {
+        "tier": 4,
+        "costADN": 787,
+        "addedHourlyADN": 118,
+        "paybackHours": 6.67,
+        "phase": "Starter",
+        "efficiencyScore": 149.94
+      },
+      {
+        "tier": 5,
+        "costADN": 1063,
+        "addedHourlyADN": 140,
+        "paybackHours": 7.59,
+        "phase": "Starter",
+        "efficiencyScore": 131.7
+      },
+      {
+        "tier": 6,
+        "costADN": 1435,
+        "addedHourlyADN": 167,
+        "paybackHours": 8.59,
+        "phase": "Starter",
+        "efficiencyScore": 116.38
+      },
+      {
+        "tier": 7,
+        "costADN": 1937,
+        "addedHourlyADN": 199,
+        "paybackHours": 9.73,
+        "phase": "Starter",
+        "efficiencyScore": 102.74
+      },
+      {
+        "tier": 8,
+        "costADN": 2615,
+        "addedHourlyADN": 237,
+        "paybackHours": 11.03,
+        "phase": "Starter",
+        "efficiencyScore": 90.63
+      },
+      {
+        "tier": 9,
+        "costADN": 3530,
+        "addedHourlyADN": 281,
+        "paybackHours": 12.56,
+        "phase": "Starter",
+        "efficiencyScore": 79.6
+      },
+      {
+        "tier": 10,
+        "costADN": 4766,
+        "addedHourlyADN": 335,
+        "paybackHours": 14.23,
+        "phase": "Starter",
+        "efficiencyScore": 70.29
+      },
+      {
+        "tier": 11,
+        "costADN": 6434,
+        "addedHourlyADN": 399,
+        "paybackHours": 16.13,
+        "phase": "Starter",
+        "efficiencyScore": 62.01
+      },
+      {
+        "tier": 12,
+        "costADN": 8686,
+        "addedHourlyADN": 474,
+        "paybackHours": 18.32,
+        "phase": "Starter",
+        "efficiencyScore": 54.57
+      },
+      {
+        "tier": 13,
+        "costADN": 11726,
+        "addedHourlyADN": 564,
+        "paybackHours": 20.79,
+        "phase": "Starter",
+        "efficiencyScore": 48.1
+      },
+      {
+        "tier": 14,
+        "costADN": 15830,
+        "addedHourlyADN": 672,
+        "paybackHours": 23.56,
+        "phase": "Starter",
+        "efficiencyScore": 42.45
+      },
+      {
+        "tier": 15,
+        "costADN": 21371,
+        "addedHourlyADN": 799,
+        "paybackHours": 26.75,
+        "phase": "Starter",
+        "efficiencyScore": 37.39
+      }
+    ]
+  },
+  {
+    "id": "asic_vault",
+    "name": "ASIC Vault",
+    "category": "Mining",
+    "unlockLevel": 6,
+    "secondaryEffect": "Tap crit chance",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 400,
+        "addedHourlyADN": 90,
+        "paybackHours": 4.44,
+        "phase": "Starter",
+        "efficiencyScore": 225.0
+      },
+      {
+        "tier": 2,
+        "costADN": 548,
+        "addedHourlyADN": 109,
+        "paybackHours": 5.03,
+        "phase": "Starter",
+        "efficiencyScore": 198.91
+      },
+      {
+        "tier": 3,
+        "costADN": 751,
+        "addedHourlyADN": 132,
+        "paybackHours": 5.69,
+        "phase": "Starter",
+        "efficiencyScore": 175.77
+      },
+      {
+        "tier": 4,
+        "costADN": 1029,
+        "addedHourlyADN": 159,
+        "paybackHours": 6.47,
+        "phase": "Starter",
+        "efficiencyScore": 154.52
+      },
+      {
+        "tier": 5,
+        "costADN": 1409,
+        "addedHourlyADN": 193,
+        "paybackHours": 7.3,
+        "phase": "Starter",
+        "efficiencyScore": 136.98
+      },
+      {
+        "tier": 6,
+        "costADN": 1930,
+        "addedHourlyADN": 233,
+        "paybackHours": 8.28,
+        "phase": "Starter",
+        "efficiencyScore": 120.73
+      },
+      {
+        "tier": 7,
+        "costADN": 2645,
+        "addedHourlyADN": 282,
+        "paybackHours": 9.38,
+        "phase": "Starter",
+        "efficiencyScore": 106.62
+      },
+      {
+        "tier": 8,
+        "costADN": 3623,
+        "addedHourlyADN": 342,
+        "paybackHours": 10.59,
+        "phase": "Starter",
+        "efficiencyScore": 94.4
+      },
+      {
+        "tier": 9,
+        "costADN": 4964,
+        "addedHourlyADN": 414,
+        "paybackHours": 11.99,
+        "phase": "Starter",
+        "efficiencyScore": 83.4
+      },
+      {
+        "tier": 10,
+        "costADN": 6801,
+        "addedHourlyADN": 500,
+        "paybackHours": 13.6,
+        "phase": "Starter",
+        "efficiencyScore": 73.52
+      },
+      {
+        "tier": 11,
+        "costADN": 9317,
+        "addedHourlyADN": 605,
+        "paybackHours": 15.4,
+        "phase": "Starter",
+        "efficiencyScore": 64.94
+      },
+      {
+        "tier": 12,
+        "costADN": 12764,
+        "addedHourlyADN": 733,
+        "paybackHours": 17.41,
+        "phase": "Starter",
+        "efficiencyScore": 57.43
+      },
+      {
+        "tier": 13,
+        "costADN": 17487,
+        "addedHourlyADN": 886,
+        "paybackHours": 19.74,
+        "phase": "Starter",
+        "efficiencyScore": 50.67
+      },
+      {
+        "tier": 14,
+        "costADN": 23957,
+        "addedHourlyADN": 1073,
+        "paybackHours": 22.33,
+        "phase": "Starter",
+        "efficiencyScore": 44.79
+      },
+      {
+        "tier": 15,
+        "costADN": 32821,
+        "addedHourlyADN": 1298,
+        "paybackHours": 25.29,
+        "phase": "Starter",
+        "efficiencyScore": 39.55
+      }
+    ]
+  },
+  {
+    "id": "swap_router",
+    "name": "Swap Router",
+    "category": "Exchange",
+    "unlockLevel": 8,
+    "secondaryEffect": "Market fee bonus",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 600,
+        "addedHourlyADN": 130,
+        "paybackHours": 4.62,
+        "phase": "Midgame",
+        "efficiencyScore": 216.67
+      },
+      {
+        "tier": 2,
+        "costADN": 816,
+        "addedHourlyADN": 156,
+        "paybackHours": 5.23,
+        "phase": "Midgame",
+        "efficiencyScore": 191.18
+      },
+      {
+        "tier": 3,
+        "costADN": 1110,
+        "addedHourlyADN": 187,
+        "paybackHours": 5.94,
+        "phase": "Midgame",
+        "efficiencyScore": 168.47
+      },
+      {
+        "tier": 4,
+        "costADN": 1509,
+        "addedHourlyADN": 225,
+        "paybackHours": 6.71,
+        "phase": "Midgame",
+        "efficiencyScore": 149.11
+      },
+      {
+        "tier": 5,
+        "costADN": 2053,
+        "addedHourlyADN": 270,
+        "paybackHours": 7.6,
+        "phase": "Midgame",
+        "efficiencyScore": 131.51
+      },
+      {
+        "tier": 6,
+        "costADN": 2792,
+        "addedHourlyADN": 323,
+        "paybackHours": 8.64,
+        "phase": "Midgame",
+        "efficiencyScore": 115.69
+      },
+      {
+        "tier": 7,
+        "costADN": 3797,
+        "addedHourlyADN": 388,
+        "paybackHours": 9.79,
+        "phase": "Midgame",
+        "efficiencyScore": 102.19
+      },
+      {
+        "tier": 8,
+        "costADN": 5163,
+        "addedHourlyADN": 466,
+        "paybackHours": 11.08,
+        "phase": "Midgame",
+        "efficiencyScore": 90.26
+      },
+      {
+        "tier": 9,
+        "costADN": 7022,
+        "addedHourlyADN": 559,
+        "paybackHours": 12.56,
+        "phase": "Midgame",
+        "efficiencyScore": 79.61
+      },
+      {
+        "tier": 10,
+        "costADN": 9550,
+        "addedHourlyADN": 671,
+        "paybackHours": 14.23,
+        "phase": "Midgame",
+        "efficiencyScore": 70.26
+      },
+      {
+        "tier": 11,
+        "costADN": 12988,
+        "addedHourlyADN": 805,
+        "paybackHours": 16.13,
+        "phase": "Midgame",
+        "efficiencyScore": 61.98
+      },
+      {
+        "tier": 12,
+        "costADN": 17664,
+        "addedHourlyADN": 966,
+        "paybackHours": 18.29,
+        "phase": "Midgame",
+        "efficiencyScore": 54.69
+      },
+      {
+        "tier": 13,
+        "costADN": 24022,
+        "addedHourlyADN": 1159,
+        "paybackHours": 20.73,
+        "phase": "Midgame",
+        "efficiencyScore": 48.25
+      },
+      {
+        "tier": 14,
+        "costADN": 32671,
+        "addedHourlyADN": 1391,
+        "paybackHours": 23.49,
+        "phase": "Midgame",
+        "efficiencyScore": 42.58
+      },
+      {
+        "tier": 15,
+        "costADN": 44432,
+        "addedHourlyADN": 1669,
+        "paybackHours": 26.62,
+        "phase": "Midgame",
+        "efficiencyScore": 37.56
+      }
+    ]
+  },
+  {
+    "id": "creator_bounties",
+    "name": "Creator Bounties",
+    "category": "Community",
+    "unlockLevel": 10,
+    "secondaryEffect": "Quest reward",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 850,
+        "addedHourlyADN": 180,
+        "paybackHours": 4.72,
+        "phase": "Midgame",
+        "efficiencyScore": 211.76
+      },
+      {
+        "tier": 2,
+        "costADN": 1148,
+        "addedHourlyADN": 214,
+        "paybackHours": 5.36,
+        "phase": "Midgame",
+        "efficiencyScore": 186.41
+      },
+      {
+        "tier": 3,
+        "costADN": 1549,
+        "addedHourlyADN": 255,
+        "paybackHours": 6.07,
+        "phase": "Midgame",
+        "efficiencyScore": 164.62
+      },
+      {
+        "tier": 4,
+        "costADN": 2091,
+        "addedHourlyADN": 303,
+        "paybackHours": 6.9,
+        "phase": "Midgame",
+        "efficiencyScore": 144.91
+      },
+      {
+        "tier": 5,
+        "costADN": 2823,
+        "addedHourlyADN": 361,
+        "paybackHours": 7.82,
+        "phase": "Midgame",
+        "efficiencyScore": 127.88
+      },
+      {
+        "tier": 6,
+        "costADN": 3811,
+        "addedHourlyADN": 430,
+        "paybackHours": 8.86,
+        "phase": "Midgame",
+        "efficiencyScore": 112.83
+      },
+      {
+        "tier": 7,
+        "costADN": 5145,
+        "addedHourlyADN": 511,
+        "paybackHours": 10.07,
+        "phase": "Midgame",
+        "efficiencyScore": 99.32
+      },
+      {
+        "tier": 8,
+        "costADN": 6946,
+        "addedHourlyADN": 608,
+        "paybackHours": 11.42,
+        "phase": "Midgame",
+        "efficiencyScore": 87.53
+      },
+      {
+        "tier": 9,
+        "costADN": 9378,
+        "addedHourlyADN": 724,
+        "paybackHours": 12.95,
+        "phase": "Midgame",
+        "efficiencyScore": 77.2
+      },
+      {
+        "tier": 10,
+        "costADN": 12660,
+        "addedHourlyADN": 861,
+        "paybackHours": 14.7,
+        "phase": "Midgame",
+        "efficiencyScore": 68.01
+      },
+      {
+        "tier": 11,
+        "costADN": 17091,
+        "addedHourlyADN": 1025,
+        "paybackHours": 16.67,
+        "phase": "Midgame",
+        "efficiencyScore": 59.97
+      },
+      {
+        "tier": 12,
+        "costADN": 23072,
+        "addedHourlyADN": 1220,
+        "paybackHours": 18.91,
+        "phase": "Midgame",
+        "efficiencyScore": 52.88
+      },
+      {
+        "tier": 13,
+        "costADN": 31148,
+        "addedHourlyADN": 1452,
+        "paybackHours": 21.45,
+        "phase": "Midgame",
+        "efficiencyScore": 46.62
+      },
+      {
+        "tier": 14,
+        "costADN": 42049,
+        "addedHourlyADN": 1727,
+        "paybackHours": 24.35,
+        "phase": "Midgame",
+        "efficiencyScore": 41.07
+      },
+      {
+        "tier": 15,
+        "costADN": 56766,
+        "addedHourlyADN": 2056,
+        "paybackHours": 27.61,
+        "phase": "Midgame",
+        "efficiencyScore": 36.22
+      }
+    ]
+  },
+  {
+    "id": "wallet_vault",
+    "name": "Wallet Vault",
+    "category": "Security",
+    "unlockLevel": 11,
+    "secondaryEffect": "Trust score",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 900,
+        "addedHourlyADN": 170,
+        "paybackHours": 5.29,
+        "phase": "Midgame",
+        "efficiencyScore": 188.89
+      },
+      {
+        "tier": 2,
+        "costADN": 1215,
+        "addedHourlyADN": 201,
+        "paybackHours": 6.04,
+        "phase": "Midgame",
+        "efficiencyScore": 165.43
+      },
+      {
+        "tier": 3,
+        "costADN": 1640,
+        "addedHourlyADN": 237,
+        "paybackHours": 6.92,
+        "phase": "Midgame",
+        "efficiencyScore": 144.51
+      },
+      {
+        "tier": 4,
+        "costADN": 2214,
+        "addedHourlyADN": 279,
+        "paybackHours": 7.94,
+        "phase": "Midgame",
+        "efficiencyScore": 126.02
+      },
+      {
+        "tier": 5,
+        "costADN": 2989,
+        "addedHourlyADN": 330,
+        "paybackHours": 9.06,
+        "phase": "Midgame",
+        "efficiencyScore": 110.4
+      },
+      {
+        "tier": 6,
+        "costADN": 4036,
+        "addedHourlyADN": 389,
+        "paybackHours": 10.38,
+        "phase": "Midgame",
+        "efficiencyScore": 96.38
+      },
+      {
+        "tier": 7,
+        "costADN": 5448,
+        "addedHourlyADN": 459,
+        "paybackHours": 11.87,
+        "phase": "Midgame",
+        "efficiencyScore": 84.25
+      },
+      {
+        "tier": 8,
+        "costADN": 7355,
+        "addedHourlyADN": 542,
+        "paybackHours": 13.57,
+        "phase": "Midgame",
+        "efficiencyScore": 73.69
+      },
+      {
+        "tier": 9,
+        "costADN": 9929,
+        "addedHourlyADN": 639,
+        "paybackHours": 15.54,
+        "phase": "Midgame",
+        "efficiencyScore": 64.36
+      },
+      {
+        "tier": 10,
+        "costADN": 13404,
+        "addedHourlyADN": 754,
+        "paybackHours": 17.78,
+        "phase": "Midgame",
+        "efficiencyScore": 56.25
+      },
+      {
+        "tier": 11,
+        "costADN": 18096,
+        "addedHourlyADN": 890,
+        "paybackHours": 20.33,
+        "phase": "Midgame",
+        "efficiencyScore": 49.18
+      },
+      {
+        "tier": 12,
+        "costADN": 24429,
+        "addedHourlyADN": 1050,
+        "paybackHours": 23.27,
+        "phase": "Midgame",
+        "efficiencyScore": 42.98
+      },
+      {
+        "tier": 13,
+        "costADN": 32980,
+        "addedHourlyADN": 1239,
+        "paybackHours": 26.62,
+        "phase": "Midgame",
+        "efficiencyScore": 37.57
+      },
+      {
+        "tier": 14,
+        "costADN": 44523,
+        "addedHourlyADN": 1462,
+        "paybackHours": 30.45,
+        "phase": "Midgame",
+        "efficiencyScore": 32.84
+      },
+      {
+        "tier": 15,
+        "costADN": 60106,
+        "addedHourlyADN": 1725,
+        "paybackHours": 34.84,
+        "phase": "Midgame",
+        "efficiencyScore": 28.7
+      }
+    ]
+  },
+  {
+    "id": "quantum_cooler",
+    "name": "Quantum Cooler",
+    "category": "Mining",
+    "unlockLevel": 12,
+    "secondaryEffect": "Max energy",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 1500,
+        "addedHourlyADN": 260,
+        "paybackHours": 5.77,
+        "phase": "Midgame",
+        "efficiencyScore": 173.33
+      },
+      {
+        "tier": 2,
+        "costADN": 2085,
+        "addedHourlyADN": 317,
+        "paybackHours": 6.58,
+        "phase": "Midgame",
+        "efficiencyScore": 152.04
+      },
+      {
+        "tier": 3,
+        "costADN": 2898,
+        "addedHourlyADN": 387,
+        "paybackHours": 7.49,
+        "phase": "Midgame",
+        "efficiencyScore": 133.54
+      },
+      {
+        "tier": 4,
+        "costADN": 4028,
+        "addedHourlyADN": 472,
+        "paybackHours": 8.53,
+        "phase": "Midgame",
+        "efficiencyScore": 117.18
+      },
+      {
+        "tier": 5,
+        "costADN": 5600,
+        "addedHourlyADN": 576,
+        "paybackHours": 9.72,
+        "phase": "Midgame",
+        "efficiencyScore": 102.86
+      },
+      {
+        "tier": 6,
+        "costADN": 7783,
+        "addedHourlyADN": 703,
+        "paybackHours": 11.07,
+        "phase": "Midgame",
+        "efficiencyScore": 90.33
+      },
+      {
+        "tier": 7,
+        "costADN": 10819,
+        "addedHourlyADN": 857,
+        "paybackHours": 12.62,
+        "phase": "Midgame",
+        "efficiencyScore": 79.21
+      },
+      {
+        "tier": 8,
+        "costADN": 15038,
+        "addedHourlyADN": 1046,
+        "paybackHours": 14.38,
+        "phase": "Midgame",
+        "efficiencyScore": 69.56
+      },
+      {
+        "tier": 9,
+        "costADN": 20903,
+        "addedHourlyADN": 1276,
+        "paybackHours": 16.38,
+        "phase": "Midgame",
+        "efficiencyScore": 61.04
+      },
+      {
+        "tier": 10,
+        "costADN": 29055,
+        "addedHourlyADN": 1557,
+        "paybackHours": 18.66,
+        "phase": "Midgame",
+        "efficiencyScore": 53.59
+      },
+      {
+        "tier": 11,
+        "costADN": 40387,
+        "addedHourlyADN": 1899,
+        "paybackHours": 21.27,
+        "phase": "Midgame",
+        "efficiencyScore": 47.02
+      },
+      {
+        "tier": 12,
+        "costADN": 56138,
+        "addedHourlyADN": 2317,
+        "paybackHours": 24.23,
+        "phase": "Midgame",
+        "efficiencyScore": 41.27
+      },
+      {
+        "tier": 13,
+        "costADN": 78031,
+        "addedHourlyADN": 2827,
+        "paybackHours": 27.6,
+        "phase": "Midgame",
+        "efficiencyScore": 36.23
+      },
+      {
+        "tier": 14,
+        "costADN": 108464,
+        "addedHourlyADN": 3449,
+        "paybackHours": 31.45,
+        "phase": "Midgame",
+        "efficiencyScore": 31.8
+      },
+      {
+        "tier": 15,
+        "costADN": 150764,
+        "addedHourlyADN": 4207,
+        "paybackHours": 35.84,
+        "phase": "Midgame",
+        "efficiencyScore": 27.9
+      }
+    ]
+  },
+  {
+    "id": "ai_optimizer",
+    "name": "AI Optimizer",
+    "category": "Research",
+    "unlockLevel": 13,
+    "secondaryEffect": "Card synergy",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 1600,
+        "addedHourlyADN": 320,
+        "paybackHours": 5.0,
+        "phase": "Midgame",
+        "efficiencyScore": 200.0
+      },
+      {
+        "tier": 2,
+        "costADN": 2192,
+        "addedHourlyADN": 387,
+        "paybackHours": 5.66,
+        "phase": "Midgame",
+        "efficiencyScore": 176.55
+      },
+      {
+        "tier": 3,
+        "costADN": 3003,
+        "addedHourlyADN": 469,
+        "paybackHours": 6.4,
+        "phase": "Midgame",
+        "efficiencyScore": 156.18
+      },
+      {
+        "tier": 4,
+        "costADN": 4114,
+        "addedHourlyADN": 567,
+        "paybackHours": 7.26,
+        "phase": "Midgame",
+        "efficiencyScore": 137.82
+      },
+      {
+        "tier": 5,
+        "costADN": 5636,
+        "addedHourlyADN": 686,
+        "paybackHours": 8.22,
+        "phase": "Midgame",
+        "efficiencyScore": 121.72
+      },
+      {
+        "tier": 6,
+        "costADN": 7722,
+        "addedHourlyADN": 830,
+        "paybackHours": 9.3,
+        "phase": "Midgame",
+        "efficiencyScore": 107.49
+      },
+      {
+        "tier": 7,
+        "costADN": 10579,
+        "addedHourlyADN": 1004,
+        "paybackHours": 10.54,
+        "phase": "Midgame",
+        "efficiencyScore": 94.91
+      },
+      {
+        "tier": 8,
+        "costADN": 14493,
+        "addedHourlyADN": 1215,
+        "paybackHours": 11.93,
+        "phase": "Midgame",
+        "efficiencyScore": 83.83
+      },
+      {
+        "tier": 9,
+        "costADN": 19856,
+        "addedHourlyADN": 1470,
+        "paybackHours": 13.51,
+        "phase": "Midgame",
+        "efficiencyScore": 74.03
+      },
+      {
+        "tier": 10,
+        "costADN": 27202,
+        "addedHourlyADN": 1779,
+        "paybackHours": 15.29,
+        "phase": "Midgame",
+        "efficiencyScore": 65.4
+      },
+      {
+        "tier": 11,
+        "costADN": 37267,
+        "addedHourlyADN": 2153,
+        "paybackHours": 17.31,
+        "phase": "Midgame",
+        "efficiencyScore": 57.77
+      },
+      {
+        "tier": 12,
+        "costADN": 51056,
+        "addedHourlyADN": 2605,
+        "paybackHours": 19.6,
+        "phase": "Midgame",
+        "efficiencyScore": 51.02
+      },
+      {
+        "tier": 13,
+        "costADN": 69947,
+        "addedHourlyADN": 3152,
+        "paybackHours": 22.19,
+        "phase": "Midgame",
+        "efficiencyScore": 45.06
+      },
+      {
+        "tier": 14,
+        "costADN": 95827,
+        "addedHourlyADN": 3814,
+        "paybackHours": 25.13,
+        "phase": "Midgame",
+        "efficiencyScore": 39.8
+      },
+      {
+        "tier": 15,
+        "costADN": 131283,
+        "addedHourlyADN": 4615,
+        "paybackHours": 28.45,
+        "phase": "Midgame",
+        "efficiencyScore": 35.15
+      }
+    ]
+  },
+  {
+    "id": "fee_engine",
+    "name": "Fee Engine",
+    "category": "Exchange",
+    "unlockLevel": 14,
+    "secondaryEffect": "Spread capture",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 2500,
+        "addedHourlyADN": 480,
+        "paybackHours": 5.21,
+        "phase": "Midgame",
+        "efficiencyScore": 192.0
+      },
+      {
+        "tier": 2,
+        "costADN": 3450,
+        "addedHourlyADN": 576,
+        "paybackHours": 5.99,
+        "phase": "Midgame",
+        "efficiencyScore": 166.96
+      },
+      {
+        "tier": 3,
+        "costADN": 4761,
+        "addedHourlyADN": 691,
+        "paybackHours": 6.89,
+        "phase": "Midgame",
+        "efficiencyScore": 145.14
+      },
+      {
+        "tier": 4,
+        "costADN": 6570,
+        "addedHourlyADN": 829,
+        "paybackHours": 7.93,
+        "phase": "Midgame",
+        "efficiencyScore": 126.18
+      },
+      {
+        "tier": 5,
+        "costADN": 9067,
+        "addedHourlyADN": 995,
+        "paybackHours": 9.11,
+        "phase": "Midgame",
+        "efficiencyScore": 109.74
+      },
+      {
+        "tier": 6,
+        "costADN": 12512,
+        "addedHourlyADN": 1194,
+        "paybackHours": 10.48,
+        "phase": "Midgame",
+        "efficiencyScore": 95.43
+      },
+      {
+        "tier": 7,
+        "costADN": 17267,
+        "addedHourlyADN": 1433,
+        "paybackHours": 12.05,
+        "phase": "Midgame",
+        "efficiencyScore": 82.99
+      },
+      {
+        "tier": 8,
+        "costADN": 23828,
+        "addedHourlyADN": 1720,
+        "paybackHours": 13.85,
+        "phase": "Midgame",
+        "efficiencyScore": 72.18
+      },
+      {
+        "tier": 9,
+        "costADN": 32883,
+        "addedHourlyADN": 2064,
+        "paybackHours": 15.93,
+        "phase": "Midgame",
+        "efficiencyScore": 62.77
+      },
+      {
+        "tier": 10,
+        "costADN": 45379,
+        "addedHourlyADN": 2477,
+        "paybackHours": 18.32,
+        "phase": "Midgame",
+        "efficiencyScore": 54.58
+      },
+      {
+        "tier": 11,
+        "costADN": 62623,
+        "addedHourlyADN": 2972,
+        "paybackHours": 21.07,
+        "phase": "Midgame",
+        "efficiencyScore": 47.46
+      },
+      {
+        "tier": 12,
+        "costADN": 86419,
+        "addedHourlyADN": 3566,
+        "paybackHours": 24.23,
+        "phase": "Midgame",
+        "efficiencyScore": 41.26
+      },
+      {
+        "tier": 13,
+        "costADN": 119258,
+        "addedHourlyADN": 4280,
+        "paybackHours": 27.86,
+        "phase": "Midgame",
+        "efficiencyScore": 35.89
+      },
+      {
+        "tier": 14,
+        "costADN": 164577,
+        "addedHourlyADN": 5136,
+        "paybackHours": 32.04,
+        "phase": "Midgame",
+        "efficiencyScore": 31.21
+      },
+      {
+        "tier": 15,
+        "costADN": 227116,
+        "addedHourlyADN": 6163,
+        "paybackHours": 36.85,
+        "phase": "Midgame",
+        "efficiencyScore": 27.14
+      }
+    ]
+  },
+  {
+    "id": "premium_market",
+    "name": "Premium Market",
+    "category": "Exchange",
+    "unlockLevel": 15,
+    "secondaryEffect": "Premium offers",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 2800,
+        "addedHourlyADN": 520,
+        "paybackHours": 5.38,
+        "phase": "Midgame",
+        "efficiencyScore": 185.71
+      },
+      {
+        "tier": 2,
+        "costADN": 3892,
+        "addedHourlyADN": 624,
+        "paybackHours": 6.24,
+        "phase": "Midgame",
+        "efficiencyScore": 160.33
+      },
+      {
+        "tier": 3,
+        "costADN": 5410,
+        "addedHourlyADN": 749,
+        "paybackHours": 7.22,
+        "phase": "Midgame",
+        "efficiencyScore": 138.45
+      },
+      {
+        "tier": 4,
+        "costADN": 7520,
+        "addedHourlyADN": 899,
+        "paybackHours": 8.36,
+        "phase": "Midgame",
+        "efficiencyScore": 119.55
+      },
+      {
+        "tier": 5,
+        "costADN": 10452,
+        "addedHourlyADN": 1078,
+        "paybackHours": 9.7,
+        "phase": "Midgame",
+        "efficiencyScore": 103.14
+      },
+      {
+        "tier": 6,
+        "costADN": 14529,
+        "addedHourlyADN": 1294,
+        "paybackHours": 11.23,
+        "phase": "Midgame",
+        "efficiencyScore": 89.06
+      },
+      {
+        "tier": 7,
+        "costADN": 20195,
+        "addedHourlyADN": 1553,
+        "paybackHours": 13.0,
+        "phase": "Midgame",
+        "efficiencyScore": 76.9
+      },
+      {
+        "tier": 8,
+        "costADN": 28071,
+        "addedHourlyADN": 1863,
+        "paybackHours": 15.07,
+        "phase": "Midgame",
+        "efficiencyScore": 66.37
+      },
+      {
+        "tier": 9,
+        "costADN": 39019,
+        "addedHourlyADN": 2236,
+        "paybackHours": 17.45,
+        "phase": "Midgame",
+        "efficiencyScore": 57.31
+      },
+      {
+        "tier": 10,
+        "costADN": 54236,
+        "addedHourlyADN": 2683,
+        "paybackHours": 20.21,
+        "phase": "Midgame",
+        "efficiencyScore": 49.47
+      },
+      {
+        "tier": 11,
+        "costADN": 75389,
+        "addedHourlyADN": 3220,
+        "paybackHours": 23.41,
+        "phase": "Midgame",
+        "efficiencyScore": 42.71
+      },
+      {
+        "tier": 12,
+        "costADN": 104790,
+        "addedHourlyADN": 3864,
+        "paybackHours": 27.12,
+        "phase": "Midgame",
+        "efficiencyScore": 36.87
+      },
+      {
+        "tier": 13,
+        "costADN": 145658,
+        "addedHourlyADN": 4636,
+        "paybackHours": 31.42,
+        "phase": "Midgame",
+        "efficiencyScore": 31.83
+      },
+      {
+        "tier": 14,
+        "costADN": 202465,
+        "addedHourlyADN": 5564,
+        "paybackHours": 36.39,
+        "phase": "Midgame",
+        "efficiencyScore": 27.48
+      },
+      {
+        "tier": 15,
+        "costADN": 281427,
+        "addedHourlyADN": 6676,
+        "paybackHours": 42.16,
+        "phase": "Midgame",
+        "efficiencyScore": 23.72
+      }
+    ]
+  },
+  {
+    "id": "guild_program",
+    "name": "Guild Program",
+    "category": "Community",
+    "unlockLevel": 18,
+    "secondaryEffect": "Guild reward",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 3000,
+        "addedHourlyADN": 600,
+        "paybackHours": 5.0,
+        "phase": "Late Midgame",
+        "efficiencyScore": 200.0
+      },
+      {
+        "tier": 2,
+        "costADN": 4140,
+        "addedHourlyADN": 714,
+        "paybackHours": 5.8,
+        "phase": "Late Midgame",
+        "efficiencyScore": 172.46
+      },
+      {
+        "tier": 3,
+        "costADN": 5713,
+        "addedHourlyADN": 850,
+        "paybackHours": 6.72,
+        "phase": "Late Midgame",
+        "efficiencyScore": 148.78
+      },
+      {
+        "tier": 4,
+        "costADN": 7884,
+        "addedHourlyADN": 1011,
+        "paybackHours": 7.8,
+        "phase": "Late Midgame",
+        "efficiencyScore": 128.23
+      },
+      {
+        "tier": 5,
+        "costADN": 10880,
+        "addedHourlyADN": 1203,
+        "paybackHours": 9.04,
+        "phase": "Late Midgame",
+        "efficiencyScore": 110.57
+      },
+      {
+        "tier": 6,
+        "costADN": 15015,
+        "addedHourlyADN": 1432,
+        "paybackHours": 10.49,
+        "phase": "Late Midgame",
+        "efficiencyScore": 95.37
+      },
+      {
+        "tier": 7,
+        "costADN": 20720,
+        "addedHourlyADN": 1704,
+        "paybackHours": 12.16,
+        "phase": "Late Midgame",
+        "efficiencyScore": 82.24
+      },
+      {
+        "tier": 8,
+        "costADN": 28594,
+        "addedHourlyADN": 2028,
+        "paybackHours": 14.1,
+        "phase": "Late Midgame",
+        "efficiencyScore": 70.92
+      },
+      {
+        "tier": 9,
+        "costADN": 39460,
+        "addedHourlyADN": 2413,
+        "paybackHours": 16.35,
+        "phase": "Late Midgame",
+        "efficiencyScore": 61.15
+      },
+      {
+        "tier": 10,
+        "costADN": 54454,
+        "addedHourlyADN": 2871,
+        "paybackHours": 18.97,
+        "phase": "Late Midgame",
+        "efficiencyScore": 52.72
+      },
+      {
+        "tier": 11,
+        "costADN": 75147,
+        "addedHourlyADN": 3417,
+        "paybackHours": 21.99,
+        "phase": "Late Midgame",
+        "efficiencyScore": 45.47
+      },
+      {
+        "tier": 12,
+        "costADN": 103703,
+        "addedHourlyADN": 4066,
+        "paybackHours": 25.5,
+        "phase": "Late Midgame",
+        "efficiencyScore": 39.21
+      },
+      {
+        "tier": 13,
+        "costADN": 143110,
+        "addedHourlyADN": 4839,
+        "paybackHours": 29.57,
+        "phase": "Late Midgame",
+        "efficiencyScore": 33.81
+      },
+      {
+        "tier": 14,
+        "costADN": 197492,
+        "addedHourlyADN": 5758,
+        "paybackHours": 34.3,
+        "phase": "Late Midgame",
+        "efficiencyScore": 29.16
+      },
+      {
+        "tier": 15,
+        "costADN": 272539,
+        "addedHourlyADN": 6852,
+        "paybackHours": 39.78,
+        "phase": "Late Midgame",
+        "efficiencyScore": 25.14
+      }
+    ]
+  },
+  {
+    "id": "risk_oracle",
+    "name": "Risk Oracle",
+    "category": "Security",
+    "unlockLevel": 19,
+    "secondaryEffect": "Fraud defense",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 3500,
+        "addedHourlyADN": 620,
+        "paybackHours": 5.65,
+        "phase": "Late Midgame",
+        "efficiencyScore": 177.14
+      },
+      {
+        "tier": 2,
+        "costADN": 4795,
+        "addedHourlyADN": 738,
+        "paybackHours": 6.5,
+        "phase": "Late Midgame",
+        "efficiencyScore": 153.91
+      },
+      {
+        "tier": 3,
+        "costADN": 6569,
+        "addedHourlyADN": 878,
+        "paybackHours": 7.48,
+        "phase": "Late Midgame",
+        "efficiencyScore": 133.66
+      },
+      {
+        "tier": 4,
+        "costADN": 9000,
+        "addedHourlyADN": 1045,
+        "paybackHours": 8.61,
+        "phase": "Late Midgame",
+        "efficiencyScore": 116.11
+      },
+      {
+        "tier": 5,
+        "costADN": 12330,
+        "addedHourlyADN": 1243,
+        "paybackHours": 9.92,
+        "phase": "Late Midgame",
+        "efficiencyScore": 100.81
+      },
+      {
+        "tier": 6,
+        "costADN": 16892,
+        "addedHourlyADN": 1480,
+        "paybackHours": 11.41,
+        "phase": "Late Midgame",
+        "efficiencyScore": 87.62
+      },
+      {
+        "tier": 7,
+        "costADN": 23141,
+        "addedHourlyADN": 1761,
+        "paybackHours": 13.14,
+        "phase": "Late Midgame",
+        "efficiencyScore": 76.1
+      },
+      {
+        "tier": 8,
+        "costADN": 31704,
+        "addedHourlyADN": 2095,
+        "paybackHours": 15.13,
+        "phase": "Late Midgame",
+        "efficiencyScore": 66.08
+      },
+      {
+        "tier": 9,
+        "costADN": 43434,
+        "addedHourlyADN": 2493,
+        "paybackHours": 17.42,
+        "phase": "Late Midgame",
+        "efficiencyScore": 57.4
+      },
+      {
+        "tier": 10,
+        "costADN": 59505,
+        "addedHourlyADN": 2967,
+        "paybackHours": 20.06,
+        "phase": "Late Midgame",
+        "efficiencyScore": 49.86
+      },
+      {
+        "tier": 11,
+        "costADN": 81522,
+        "addedHourlyADN": 3531,
+        "paybackHours": 23.09,
+        "phase": "Late Midgame",
+        "efficiencyScore": 43.31
+      },
+      {
+        "tier": 12,
+        "costADN": 111685,
+        "addedHourlyADN": 4202,
+        "paybackHours": 26.58,
+        "phase": "Late Midgame",
+        "efficiencyScore": 37.62
+      },
+      {
+        "tier": 13,
+        "costADN": 153008,
+        "addedHourlyADN": 5000,
+        "paybackHours": 30.6,
+        "phase": "Late Midgame",
+        "efficiencyScore": 32.68
+      },
+      {
+        "tier": 14,
+        "costADN": 209621,
+        "addedHourlyADN": 5950,
+        "paybackHours": 35.23,
+        "phase": "Late Midgame",
+        "efficiencyScore": 28.38
+      },
+      {
+        "tier": 15,
+        "costADN": 287181,
+        "addedHourlyADN": 7080,
+        "paybackHours": 40.56,
+        "phase": "Late Midgame",
+        "efficiencyScore": 24.65
+      }
+    ]
+  },
+  {
+    "id": "market_maker",
+    "name": "Market Maker",
+    "category": "Exchange",
+    "unlockLevel": 20,
+    "secondaryEffect": "Liquidity depth",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 7000,
+        "addedHourlyADN": 1200,
+        "paybackHours": 5.83,
+        "phase": "Late Midgame",
+        "efficiencyScore": 171.43
+      },
+      {
+        "tier": 2,
+        "costADN": 9800,
+        "addedHourlyADN": 1464,
+        "paybackHours": 6.69,
+        "phase": "Late Midgame",
+        "efficiencyScore": 149.39
+      },
+      {
+        "tier": 3,
+        "costADN": 13720,
+        "addedHourlyADN": 1786,
+        "paybackHours": 7.68,
+        "phase": "Late Midgame",
+        "efficiencyScore": 130.17
+      },
+      {
+        "tier": 4,
+        "costADN": 19208,
+        "addedHourlyADN": 2179,
+        "paybackHours": 8.82,
+        "phase": "Late Midgame",
+        "efficiencyScore": 113.44
+      },
+      {
+        "tier": 5,
+        "costADN": 26891,
+        "addedHourlyADN": 2658,
+        "paybackHours": 10.12,
+        "phase": "Late Midgame",
+        "efficiencyScore": 98.84
+      },
+      {
+        "tier": 6,
+        "costADN": 37648,
+        "addedHourlyADN": 3243,
+        "paybackHours": 11.61,
+        "phase": "Late Midgame",
+        "efficiencyScore": 86.14
+      },
+      {
+        "tier": 7,
+        "costADN": 52707,
+        "addedHourlyADN": 3957,
+        "paybackHours": 13.32,
+        "phase": "Late Midgame",
+        "efficiencyScore": 75.08
+      },
+      {
+        "tier": 8,
+        "costADN": 73789,
+        "addedHourlyADN": 4827,
+        "paybackHours": 15.29,
+        "phase": "Late Midgame",
+        "efficiencyScore": 65.42
+      },
+      {
+        "tier": 9,
+        "costADN": 103305,
+        "addedHourlyADN": 5889,
+        "paybackHours": 17.54,
+        "phase": "Late Midgame",
+        "efficiencyScore": 57.01
+      },
+      {
+        "tier": 10,
+        "costADN": 144627,
+        "addedHourlyADN": 7185,
+        "paybackHours": 20.13,
+        "phase": "Late Midgame",
+        "efficiencyScore": 49.68
+      },
+      {
+        "tier": 11,
+        "costADN": 202478,
+        "addedHourlyADN": 8766,
+        "paybackHours": 23.1,
+        "phase": "Late Midgame",
+        "efficiencyScore": 43.29
+      },
+      {
+        "tier": 12,
+        "costADN": 283470,
+        "addedHourlyADN": 10694,
+        "paybackHours": 26.51,
+        "phase": "Late Midgame",
+        "efficiencyScore": 37.73
+      },
+      {
+        "tier": 13,
+        "costADN": 396857,
+        "addedHourlyADN": 13047,
+        "paybackHours": 30.42,
+        "phase": "Late Midgame",
+        "efficiencyScore": 32.88
+      },
+      {
+        "tier": 14,
+        "costADN": 555600,
+        "addedHourlyADN": 15917,
+        "paybackHours": 34.91,
+        "phase": "Late Midgame",
+        "efficiencyScore": 28.65
+      },
+      {
+        "tier": 15,
+        "costADN": 777840,
+        "addedHourlyADN": 19419,
+        "paybackHours": 40.06,
+        "phase": "Late Midgame",
+        "efficiencyScore": 24.97
+      }
+    ]
+  },
+  {
+    "id": "auto_tap_drones",
+    "name": "Auto-Tap Drones",
+    "category": "Research",
+    "unlockLevel": 22,
+    "secondaryEffect": "Idle taps",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 5200,
+        "addedHourlyADN": 950,
+        "paybackHours": 5.47,
+        "phase": "Late Midgame",
+        "efficiencyScore": 182.69
+      },
+      {
+        "tier": 2,
+        "costADN": 7228,
+        "addedHourlyADN": 1140,
+        "paybackHours": 6.34,
+        "phase": "Late Midgame",
+        "efficiencyScore": 157.72
+      },
+      {
+        "tier": 3,
+        "costADN": 10047,
+        "addedHourlyADN": 1368,
+        "paybackHours": 7.34,
+        "phase": "Late Midgame",
+        "efficiencyScore": 136.16
+      },
+      {
+        "tier": 4,
+        "costADN": 13965,
+        "addedHourlyADN": 1642,
+        "paybackHours": 8.5,
+        "phase": "Late Midgame",
+        "efficiencyScore": 117.58
+      },
+      {
+        "tier": 5,
+        "costADN": 19412,
+        "addedHourlyADN": 1970,
+        "paybackHours": 9.85,
+        "phase": "Late Midgame",
+        "efficiencyScore": 101.48
+      },
+      {
+        "tier": 6,
+        "costADN": 26982,
+        "addedHourlyADN": 2364,
+        "paybackHours": 11.41,
+        "phase": "Late Midgame",
+        "efficiencyScore": 87.61
+      },
+      {
+        "tier": 7,
+        "costADN": 37505,
+        "addedHourlyADN": 2837,
+        "paybackHours": 13.22,
+        "phase": "Late Midgame",
+        "efficiencyScore": 75.64
+      },
+      {
+        "tier": 8,
+        "costADN": 52132,
+        "addedHourlyADN": 3404,
+        "paybackHours": 15.31,
+        "phase": "Late Midgame",
+        "efficiencyScore": 65.3
+      },
+      {
+        "tier": 9,
+        "costADN": 72464,
+        "addedHourlyADN": 4085,
+        "paybackHours": 17.74,
+        "phase": "Late Midgame",
+        "efficiencyScore": 56.37
+      },
+      {
+        "tier": 10,
+        "costADN": 100725,
+        "addedHourlyADN": 4902,
+        "paybackHours": 20.55,
+        "phase": "Late Midgame",
+        "efficiencyScore": 48.67
+      },
+      {
+        "tier": 11,
+        "costADN": 140008,
+        "addedHourlyADN": 5882,
+        "paybackHours": 23.8,
+        "phase": "Late Midgame",
+        "efficiencyScore": 42.01
+      },
+      {
+        "tier": 12,
+        "costADN": 194610,
+        "addedHourlyADN": 7059,
+        "paybackHours": 27.57,
+        "phase": "Late Midgame",
+        "efficiencyScore": 36.27
+      },
+      {
+        "tier": 13,
+        "costADN": 270509,
+        "addedHourlyADN": 8470,
+        "paybackHours": 31.94,
+        "phase": "Late Midgame",
+        "efficiencyScore": 31.31
+      },
+      {
+        "tier": 14,
+        "costADN": 376007,
+        "addedHourlyADN": 10164,
+        "paybackHours": 36.99,
+        "phase": "Late Midgame",
+        "efficiencyScore": 27.03
+      },
+      {
+        "tier": 15,
+        "costADN": 522650,
+        "addedHourlyADN": 12197,
+        "paybackHours": 42.85,
+        "phase": "Late Midgame",
+        "efficiencyScore": 23.34
+      }
+    ]
+  },
+  {
+    "id": "mission_center",
+    "name": "Mission Center",
+    "category": "Community",
+    "unlockLevel": 24,
+    "secondaryEffect": "Quest slots",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 9500,
+        "addedHourlyADN": 1650,
+        "paybackHours": 5.76,
+        "phase": "Late Midgame",
+        "efficiencyScore": 173.68
+      },
+      {
+        "tier": 2,
+        "costADN": 13300,
+        "addedHourlyADN": 1980,
+        "paybackHours": 6.72,
+        "phase": "Late Midgame",
+        "efficiencyScore": 148.87
+      },
+      {
+        "tier": 3,
+        "costADN": 18620,
+        "addedHourlyADN": 2376,
+        "paybackHours": 7.84,
+        "phase": "Late Midgame",
+        "efficiencyScore": 127.6
+      },
+      {
+        "tier": 4,
+        "costADN": 26068,
+        "addedHourlyADN": 2851,
+        "paybackHours": 9.14,
+        "phase": "Late Midgame",
+        "efficiencyScore": 109.37
+      },
+      {
+        "tier": 5,
+        "costADN": 36495,
+        "addedHourlyADN": 3421,
+        "paybackHours": 10.67,
+        "phase": "Late Midgame",
+        "efficiencyScore": 93.74
+      },
+      {
+        "tier": 6,
+        "costADN": 51093,
+        "addedHourlyADN": 4106,
+        "paybackHours": 12.44,
+        "phase": "Late Midgame",
+        "efficiencyScore": 80.36
+      },
+      {
+        "tier": 7,
+        "costADN": 71531,
+        "addedHourlyADN": 4927,
+        "paybackHours": 14.52,
+        "phase": "Late Midgame",
+        "efficiencyScore": 68.88
+      },
+      {
+        "tier": 8,
+        "costADN": 100143,
+        "addedHourlyADN": 5912,
+        "paybackHours": 16.94,
+        "phase": "Late Midgame",
+        "efficiencyScore": 59.04
+      },
+      {
+        "tier": 9,
+        "costADN": 140200,
+        "addedHourlyADN": 7095,
+        "paybackHours": 19.76,
+        "phase": "Late Midgame",
+        "efficiencyScore": 50.61
+      },
+      {
+        "tier": 10,
+        "costADN": 196280,
+        "addedHourlyADN": 8514,
+        "paybackHours": 23.05,
+        "phase": "Late Midgame",
+        "efficiencyScore": 43.38
+      },
+      {
+        "tier": 11,
+        "costADN": 274792,
+        "addedHourlyADN": 10216,
+        "paybackHours": 26.9,
+        "phase": "Late Midgame",
+        "efficiencyScore": 37.18
+      },
+      {
+        "tier": 12,
+        "costADN": 384709,
+        "addedHourlyADN": 12260,
+        "paybackHours": 31.38,
+        "phase": "Late Midgame",
+        "efficiencyScore": 31.87
+      },
+      {
+        "tier": 13,
+        "costADN": 538592,
+        "addedHourlyADN": 14712,
+        "paybackHours": 36.61,
+        "phase": "Late Midgame",
+        "efficiencyScore": 27.32
+      },
+      {
+        "tier": 14,
+        "costADN": 754029,
+        "addedHourlyADN": 17654,
+        "paybackHours": 42.71,
+        "phase": "Late Midgame",
+        "efficiencyScore": 23.41
+      },
+      {
+        "tier": 15,
+        "costADN": 1055641,
+        "addedHourlyADN": 21185,
+        "paybackHours": 49.83,
+        "phase": "Late Midgame",
+        "efficiencyScore": 20.07
+      }
+    ]
+  },
+  {
+    "id": "data_warehouse",
+    "name": "Data Warehouse",
+    "category": "Research",
+    "unlockLevel": 26,
+    "secondaryEffect": "Analytics boost",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 11000,
+        "addedHourlyADN": 1800,
+        "paybackHours": 6.11,
+        "phase": "Late Midgame",
+        "efficiencyScore": 163.64
+      },
+      {
+        "tier": 2,
+        "costADN": 15510,
+        "addedHourlyADN": 2178,
+        "paybackHours": 7.12,
+        "phase": "Late Midgame",
+        "efficiencyScore": 140.43
+      },
+      {
+        "tier": 3,
+        "costADN": 21869,
+        "addedHourlyADN": 2635,
+        "paybackHours": 8.3,
+        "phase": "Late Midgame",
+        "efficiencyScore": 120.49
+      },
+      {
+        "tier": 4,
+        "costADN": 30835,
+        "addedHourlyADN": 3189,
+        "paybackHours": 9.67,
+        "phase": "Late Midgame",
+        "efficiencyScore": 103.42
+      },
+      {
+        "tier": 5,
+        "costADN": 43478,
+        "addedHourlyADN": 3858,
+        "paybackHours": 11.27,
+        "phase": "Late Midgame",
+        "efficiencyScore": 88.73
+      },
+      {
+        "tier": 6,
+        "costADN": 61304,
+        "addedHourlyADN": 4669,
+        "paybackHours": 13.13,
+        "phase": "Late Midgame",
+        "efficiencyScore": 76.16
+      },
+      {
+        "tier": 7,
+        "costADN": 86439,
+        "addedHourlyADN": 5649,
+        "paybackHours": 15.3,
+        "phase": "Late Midgame",
+        "efficiencyScore": 65.35
+      },
+      {
+        "tier": 8,
+        "costADN": 121878,
+        "addedHourlyADN": 6835,
+        "paybackHours": 17.83,
+        "phase": "Late Midgame",
+        "efficiencyScore": 56.08
+      },
+      {
+        "tier": 9,
+        "costADN": 171848,
+        "addedHourlyADN": 8271,
+        "paybackHours": 20.78,
+        "phase": "Late Midgame",
+        "efficiencyScore": 48.13
+      },
+      {
+        "tier": 10,
+        "costADN": 242306,
+        "addedHourlyADN": 10008,
+        "paybackHours": 24.21,
+        "phase": "Late Midgame",
+        "efficiencyScore": 41.3
+      },
+      {
+        "tier": 11,
+        "costADN": 341652,
+        "addedHourlyADN": 12109,
+        "paybackHours": 28.21,
+        "phase": "Late Midgame",
+        "efficiencyScore": 35.44
+      },
+      {
+        "tier": 12,
+        "costADN": 481729,
+        "addedHourlyADN": 14652,
+        "paybackHours": 32.88,
+        "phase": "Late Midgame",
+        "efficiencyScore": 30.42
+      },
+      {
+        "tier": 13,
+        "costADN": 679238,
+        "addedHourlyADN": 17730,
+        "paybackHours": 38.31,
+        "phase": "Late Midgame",
+        "efficiencyScore": 26.1
+      },
+      {
+        "tier": 14,
+        "costADN": 957726,
+        "addedHourlyADN": 21453,
+        "paybackHours": 44.64,
+        "phase": "Late Midgame",
+        "efficiencyScore": 22.4
+      },
+      {
+        "tier": 15,
+        "costADN": 1350393,
+        "addedHourlyADN": 25958,
+        "paybackHours": 52.02,
+        "phase": "Late Midgame",
+        "efficiencyScore": 19.22
+      }
+    ]
+  },
+  {
+    "id": "whale_analytics",
+    "name": "Whale Analytics",
+    "category": "Research",
+    "unlockLevel": 30,
+    "secondaryEffect": "VIP targeting",
+    "tiers": [
+      {
+        "tier": 1,
+        "costADN": 22000,
+        "addedHourlyADN": 3300,
+        "paybackHours": 6.67,
+        "phase": "Endgame",
+        "efficiencyScore": 150.0
+      },
+      {
+        "tier": 2,
+        "costADN": 31240,
+        "addedHourlyADN": 4026,
+        "paybackHours": 7.76,
+        "phase": "Endgame",
+        "efficiencyScore": 128.87
+      },
+      {
+        "tier": 3,
+        "costADN": 44361,
+        "addedHourlyADN": 4912,
+        "paybackHours": 9.03,
+        "phase": "Endgame",
+        "efficiencyScore": 110.73
+      },
+      {
+        "tier": 4,
+        "costADN": 62992,
+        "addedHourlyADN": 5992,
+        "paybackHours": 10.51,
+        "phase": "Endgame",
+        "efficiencyScore": 95.12
+      },
+      {
+        "tier": 5,
+        "costADN": 89449,
+        "addedHourlyADN": 7311,
+        "paybackHours": 12.23,
+        "phase": "Endgame",
+        "efficiencyScore": 81.73
+      },
+      {
+        "tier": 6,
+        "costADN": 127018,
+        "addedHourlyADN": 8919,
+        "paybackHours": 14.24,
+        "phase": "Endgame",
+        "efficiencyScore": 70.22
+      },
+      {
+        "tier": 7,
+        "costADN": 180365,
+        "addedHourlyADN": 10881,
+        "paybackHours": 16.58,
+        "phase": "Endgame",
+        "efficiencyScore": 60.33
+      },
+      {
+        "tier": 8,
+        "costADN": 256119,
+        "addedHourlyADN": 13275,
+        "paybackHours": 19.29,
+        "phase": "Endgame",
+        "efficiencyScore": 51.83
+      },
+      {
+        "tier": 9,
+        "costADN": 363688,
+        "addedHourlyADN": 16195,
+        "paybackHours": 22.46,
+        "phase": "Endgame",
+        "efficiencyScore": 44.53
+      },
+      {
+        "tier": 10,
+        "costADN": 516438,
+        "addedHourlyADN": 19758,
+        "paybackHours": 26.14,
+        "phase": "Endgame",
+        "efficiencyScore": 38.26
+      },
+      {
+        "tier": 11,
+        "costADN": 733341,
+        "addedHourlyADN": 24105,
+        "paybackHours": 30.42,
+        "phase": "Endgame",
+        "efficiencyScore": 32.87
+      },
+      {
+        "tier": 12,
+        "costADN": 1041345,
+        "addedHourlyADN": 29408,
+        "paybackHours": 35.41,
+        "phase": "Endgame",
+        "efficiencyScore": 28.24
+      },
+      {
+        "tier": 13,
+        "costADN": 1478709,
+        "addedHourlyADN": 35878,
+        "paybackHours": 41.21,
+        "phase": "Endgame",
+        "efficiencyScore": 24.26
+      },
+      {
+        "tier": 14,
+        "costADN": 2099767,
+        "addedHourlyADN": 43772,
+        "paybackHours": 47.97,
+        "phase": "Endgame",
+        "efficiencyScore": 20.85
+      },
+      {
+        "tier": 15,
+        "costADN": 2981669,
+        "addedHourlyADN": 53401,
+        "paybackHours": 55.84,
+        "phase": "Endgame",
+        "efficiencyScore": 17.91
+      }
+    ]
+  }
+]

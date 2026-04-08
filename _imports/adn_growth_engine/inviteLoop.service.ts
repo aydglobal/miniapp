@@ -1,0 +1,1 @@
+export function generateInviteReward(){ return { reward: 100 }; }

@@ -1,0 +1,28 @@
+{
+  "actions": {
+    "CLAIM_REWARD": {
+      "tr": "Hazır akışı topla. Kaynaklar boşa akmasın.",
+      "en": "Claim the ready flow. Don't let resources leak."
+    },
+    "BUY_UPGRADE": {
+      "tr": "Şu an en verimli hamle: yeni modül yatırımı.",
+      "en": "Most efficient move now: upgrade a module."
+    },
+    "COMPLETE_MISSION": {
+      "tr": "Bu operasyon seni bir üst katmana taşır.",
+      "en": "This operation pushes you into the next layer."
+    },
+    "OPEN_CHEST": {
+      "tr": "Cache hazır. Büyük sıçrama şansı burada.",
+      "en": "Cache ready. Your next spike may be here."
+    },
+    "PRESTIGE": {
+      "tr": "Reboot zamanı. Gücü sıfırlama, büyüt.",
+      "en": "Time to reboot. Don't reset power—amplify it."
+    },
+    "TAP": {
+      "tr": "Akışı manuel başlat. Sistem daha yeni ısınıyor.",
+      "en": "Start the flow manually. The system is just warming up."
+    }
+  }
+}

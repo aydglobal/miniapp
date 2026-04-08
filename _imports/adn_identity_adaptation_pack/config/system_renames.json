@@ -1,0 +1,88 @@
+{
+  "renameMap": {
+    "coin": {
+      "tr": "ADN",
+      "en": "ADN"
+    },
+    "coins": {
+      "tr": "ADN",
+      "en": "ADN"
+    },
+    "tap": {
+      "tr": "Üret",
+      "en": "Generate"
+    },
+    "mining": {
+      "tr": "Üretim",
+      "en": "Production"
+    },
+    "upgrade": {
+      "tr": "Modül Yükselt",
+      "en": "Upgrade Module"
+    },
+    "shop": {
+      "tr": "Pazar",
+      "en": "Market"
+    },
+    "mission": {
+      "tr": "Operasyon",
+      "en": "Operation"
+    },
+    "missions": {
+      "tr": "Operasyonlar",
+      "en": "Operations"
+    },
+    "chest": {
+      "tr": "Cache Drop",
+      "en": "Cache Drop"
+    },
+    "free_chest": {
+      "tr": "Serbest Cache",
+      "en": "Free Cache"
+    },
+    "premium_chest": {
+      "tr": "Black Cache",
+      "en": "Black Cache"
+    },
+    "clan": {
+      "tr": "Syndicate",
+      "en": "Syndicate"
+    },
+    "leaderboard": {
+      "tr": "Güç Sıralaması",
+      "en": "Power Board"
+    },
+    "prestige": {
+      "tr": "Reboot",
+      "en": "Reboot"
+    },
+    "daily_reward": {
+      "tr": "Günlük Akış",
+      "en": "Daily Flow"
+    },
+    "referral": {
+      "tr": "Ağ Genişletme",
+      "en": "Network Expansion"
+    },
+    "event": {
+      "tr": "Operasyon Etkinliği",
+      "en": "Operation Event"
+    },
+    "passive_income": {
+      "tr": "Saatlik Akış",
+      "en": "Hourly Flow"
+    },
+    "combo": {
+      "tr": "Momentum",
+      "en": "Momentum"
+    },
+    "jackpot": {
+      "tr": "Büyük Vuruş",
+      "en": "Big Hit"
+    },
+    "skill_tree": {
+      "tr": "Nebula Çekirdeği",
+      "en": "Nebula Core Tree"
+    }
+  }
+}

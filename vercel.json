@@ -1,0 +1,11 @@
+{
+  "buildCommand": "pnpm --filter web build",
+  "outputDirectory": "apps/web/dist",
+  "installCommand": "npm install -g pnpm@9.15.0 && pnpm install --no-frozen-lockfile",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

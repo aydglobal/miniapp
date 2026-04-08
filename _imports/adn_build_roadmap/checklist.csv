@@ -1,0 +1,26 @@
+Order,Phase,Task,Must Have,Notes
+1,0,Repo cleanup,Yes,"Remove temp folders, old routes, leaked envs"
+2,0,Deploy baseline,Yes,"Health route, Railway/Vercel env"
+3,1,Profile/state endpoints,Yes,Single payload for app bootstrap
+4,1,Tap engine,Yes,"Energy, XP, anti-cheat, mission progress"
+5,1,Passive income sync,Yes,Offline cap and claim
+6,1,Shop endpoints,Yes,List and buy/upgrade
+7,1,Level sync/unlocks,Yes,Unlock map and rewards
+8,1,Mission engine,Yes,"Assignment, progress, claim"
+9,1,Daily reward,Yes,Streak and cooldown
+10,2,Referral engine,Yes,Quality referrals only
+11,2,Leaderboards,Yes,Fraud-filtered
+12,2,Notifications,High,Return to app
+13,2,Onboarding,High,First session retention
+14,3,Economy ledger,Yes,Auditability
+15,3,Idempotency,Yes,Protect repeated claims
+16,3,Advanced anti-cheat,Yes,Farm detection
+17,3,Admin correction tools,High,Manual interventions
+18,4,Reward balance split,Yes,Coins vs payout-eligible
+19,4,Premium / Stars,High,Monetization
+20,4,Withdrawal lifecycle,High,Review/approve/send
+21,4,Airdrop engine,Optional,Growth stage
+22,5,Analytics,High,Measure retention and monetization
+23,5,A/B testing,Medium,Tune economy
+24,5,Event system,Medium,Live ops cadence
+25,5,Workers/cron,Yes,Background processing
